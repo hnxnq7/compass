@@ -28,8 +28,12 @@ related:
 - The field's 2026 default is now a modular stack — SFT, then preference optimization (DPO/SimPO/KTO variants), then RL with verifiable rewards for reasoning-heavy domains — rather than any single method doing everything
 - AI-generated preference data (RLAIF) increasingly supplying the volume, with scarce human data reserved for the hardest judgment calls
 
+## Key players
+- [[Scale AI]] — one of the main suppliers of RLHF/preference-comparison annotation to frontier labs, the human-feedback supply chain this field trains on
+- [[Hugging Face]] — TRL's DPO trainer is the default open-source reference implementation most non-frontier teams build on
+
 ## Watch list
--
+- github.com/huggingface/trl releases
 
 ## Connections
 **Parent:** [[Post-training & Alignment]]
@@ -37,4 +41,6 @@ related:
 **Depends on:** [[Process & Outcome Reward Models]]
 
 **Related:** [[RL with Verifiable Rewards]]
+
+**Key players:** [[Scale AI]], [[Hugging Face]]
 

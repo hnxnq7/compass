@@ -30,8 +30,13 @@ related:
 - Hierarchical goal decomposition with explicit replanning loops and structured (not just longer-context) memory becoming standard agent architecture, not an add-on
 - Reliability-horizon benchmarking (METR-style) becoming a standard capability metric alongside raw task accuracy
 
+## Key players
+- [[METR]] — source of the task-completion time-horizon metric this field's whole "reliability at long horizons" framing leans on
+- [[Letta]] — OS-inspired self-managed agent memory (formerly MemGPT), a structural answer to the "bounded, not context-stuffed" memory problem
+
 ## Watch list
--
+- METR time-horizon updates (metr.org/time-horizons)
+- Letta GitHub repo
 
 ## Connections
 **Parent:** [[Agents & Tool Use]]

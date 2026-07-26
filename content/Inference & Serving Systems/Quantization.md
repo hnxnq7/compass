@@ -25,11 +25,19 @@ depends_on:
 ## What solutions feel inevitable?
 - Hardware-aware low-bit formats (FP8, and increasingly INT4) becoming the default serving precision rather than an opt-in optimization, especially as accelerator silicon adds native support for them
 
+## Key players
+- [[NVIDIA]] — Blackwell's fifth-gen Tensor Cores add native NVFP4/MXFP4 support, with TensorRT-LLM as the production stack built around it
+- [[MIT HAN Lab (Song Han)]] — AWQ and SmoothQuant, both adopted directly into NVIDIA TensorRT-LLM, are the reference activation-aware quantization methods
+- [[vLLM]] — ships FP8/INT4/AWQ/GPTQ quantization as core serving features rather than a bolt-on
+
 ## Watch list
--
+- mit-han-lab GitHub org, hanlab.mit.edu
+- vLLM quantization docs, NVIDIA NVFP4 technical reports
 
 ## Connections
 **Parent:** [[Inference & Serving Systems]]
 
 **Depends on:** [[AI Accelerator Chips & Inference Silicon]]
+
+**Key players:** [[NVIDIA]], [[MIT HAN Lab (Song Han)]], [[vLLM]]
 

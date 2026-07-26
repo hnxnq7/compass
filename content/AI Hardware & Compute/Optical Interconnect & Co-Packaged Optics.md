@@ -31,8 +31,13 @@ enables:
 ## Notable tools / instances
 - NVIDIA CPO-based switches (targeting ~409.6 Tb/s, 512×800Gb/s ports), Broadcom co-packaged optics
 
+## Key players
+- [[NVIDIA]] — pushing CPO switches into production and backing optics suppliers directly (see Ayar Labs)
+- [[Ayar Labs]] — NVIDIA-backed optical I/O chiplets aimed squarely at the scale-up (chip-to-chip) transition this note flags as next
+- [[Celestial AI]] — optical memory/interconnect fabric attacking the same bottleneck from the memory-bandwidth side rather than raw I/O
+
 ## Watch list
--
+- Ayar Labs and Celestial AI press for first commercial silicon shipping; NVIDIA/Broadcom CPO switch production timelines
 
 ## Connections
 **Parent:** [[AI Hardware & Compute]]

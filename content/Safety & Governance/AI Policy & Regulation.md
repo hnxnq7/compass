@@ -27,8 +27,13 @@ related:
 - The EU AI Act (fully enforceable August 2, 2026) becoming the de facto global baseline the way GDPR did for privacy, since multinational companies build to the strictest applicable regime
 - Continued regulatory attention shifting specifically toward autonomous agents (not just models) as the unit of concern, following NIST's 2026 agent-standards initiative
 
+## Key players
+- [[CSET (Georgetown)]] — the empirical research US federal policymakers (Congress, DoD) actually cite on AI/compute/national security
+- [[GovAI (Centre for the Governance of AI)]] — Oxford-affiliated foundational research on compute thresholds and international coordination mechanisms
+
 ## Watch list
 - OECD AI Policy Observatory
+- EU AI Act enforcement rollout (full powers active August 2, 2026)
 
 ## Connections
 **Parent:** [[Safety & Governance]]

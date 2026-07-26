@@ -27,8 +27,17 @@ related:
 - Hybrid approaches — LLM-generated candidates constrained or verified by classical synthesis/formal methods — capturing the generality of LLMs with more of the correctness guarantee of classical synthesis
 - Convergence with [[Software Verification]] as verification tooling gets cheap enough (via AI-assisted formalization) to check LLM-generated code more rigorously than test cases alone
 
+## Notable tools / instances
+*Concrete instances worth having on file even though the field, not the tool, is what's tracked on the graph.*
+- Diffblue Cover — RL-search-based (not LLM) Java unit test generation, correctness-by-construction rather than plausible-looking output
+
+## Key players
+- [[MIT CAP Group (Solar-Lezama Lab)]] — originated Sketch/Rosette, arguably reignited program synthesis as an active research field
+- [[UToPiA (UT Austin, Isil Dillig)]] — program synthesis + verification, recent focus on neurosymbolic (LLM + symbolic) synthesis
+- [[Diffblue]] — commercial counterpoint to LLM code-gen: RL-search-based test synthesis with real correctness guarantees, not just plausible output
+
 ## Watch list
--
+- cap.csail.mit.edu, utopia.cs.utexas.edu, PLDI/POPL proceedings
 
 ## Connections
 **Parent:** [[Formal Methods & Verification]]

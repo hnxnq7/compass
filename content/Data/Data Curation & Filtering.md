@@ -27,8 +27,16 @@ enables:
 ## What solutions feel inevitable?
 - Curation increasingly treated as a first-class research discipline (not a preprocessing chore) given synthetic data's dependence on it for avoiding collapse
 
+## Notable tools / instances
+- NeMo Curator (NVIDIA) — GPU-native dedup/filtering pipeline (RAPIDS/cuDF, Dask) for large-scale pretraining corpora
+- RefinedWeb, FineWeb (Hugging Face), DataComp-LM — deduplicated, filtered Common-Crawl-derived corpora that have become de facto quality benchmarks for curation pipelines
+
+## Key players
+- [[Allen Institute for AI (AI2)]] — one of the few orgs publishing a full open filtering/dedup toolchain (Dolma) alongside the model actually trained on it (OLMo)
+- [[Common Crawl Foundation]] — the raw web corpus nearly every filtering pipeline in the field starts from and defines itself against
+
 ## Watch list
--
+- allenai.org/blog, commoncrawl.org blog, DataComp-LM leaderboard
 
 ## Connections
 **Parent:** [[Data]]

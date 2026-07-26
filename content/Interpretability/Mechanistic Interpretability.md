@@ -31,9 +31,18 @@ enables:
 
 ## Notable tools / instances
 - Sparse autoencoders (SAEs), CircuitLasso (scalable sparse-regression circuit learning)
+- Gemma Scope 2 — DeepMind's open SAE/transcoder toolkit across every Gemma 3 size (270M–27B params)
+
+## Key players
+- [[Anthropic]] — leading frontier lab on circuit tracing; first to fold interpretability findings into a pre-deployment safety review (Claude Sonnet 4.5)
+- [[Google DeepMind]] — dedicated mech interp team (led by Neel Nanda, ex-Anthropic) shipped Gemma Scope 2, the largest open-source SAE toolkit
+- [[Goodfire]] — startup selling hosted interpretability-as-a-service (Ember API) built on SAE feature discovery
+- [[Neuronpedia]] — open-source platform for exploring/visualizing SAE features; partnered with DeepMind on the Gemma Scope public demo
 
 ## Watch list
--
+- Transformer Circuits Thread (transformer-circuits.pub)
+- Mechanistic Interpretability Workshop @ ICML (mechinterpworkshop.com)
+- Neuronpedia
 
 ## Connections
 **Parent:** [[Interpretability]]

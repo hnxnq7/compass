@@ -28,8 +28,13 @@ enables:
 - SFT increasingly used just to establish format/instruction-following, with the actual capability work pushed into RL-based post-training stages (see [[RL with Verifiable Rewards]])
 - PEFT as the default for narrow, cheap customization; full fine-tuning reserved for cases that actually need it
 
+## Key players
+- [[Unsloth]] — fast, memory-efficient LoRA/QLoRA kernels; lowers the hardware bar enough for individual practitioners to run PEFT fine-tunes on a single consumer GPU
+- [[Hugging Face]] — PEFT is the standard open-source library for LoRA/QLoRA and other adapter methods
+
 ## Watch list
--
+- github.com/unslothai/unsloth releases
+- github.com/huggingface/peft releases
 
 ## Connections
 **Parent:** [[Post-training & Alignment]]
@@ -37,4 +42,6 @@ enables:
 **Enables:** [[Agents & Tool Use]]
 
 **Related:** [[Model Merging & Distillation]]
+
+**Key players:** [[Unsloth]], [[Hugging Face]]
 

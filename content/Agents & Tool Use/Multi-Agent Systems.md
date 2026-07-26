@@ -26,8 +26,13 @@ related:
 - Narrower specialist agents composed together, with clear task boundaries and a coordinator, beating one generalist agent specifically for high-stakes or highly parallel workflows
 - Multi-agent architectures converging on a small number of well-tested coordination patterns rather than continued bespoke design per product
 
+## Key players
+- [[LangChain]] — LangGraph's explicit-state, explicit-handoff graph model, the most widely adopted production substrate
+- [[CrewAI]] — role-based, low-friction alternative design point; useful signal for which coordination pattern actually wins in production
+
 ## Watch list
--
+- LangGraph GitHub releases
+- CrewAI GitHub releases
 
 ## Connections
 **Parent:** [[Agents & Tool Use]]

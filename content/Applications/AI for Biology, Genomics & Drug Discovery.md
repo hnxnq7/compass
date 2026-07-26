@@ -31,8 +31,18 @@ related:
 - Large pharma paying for direct access to specialized biomolecular foundation models (licensing deals) rather than building everything in-house, mirroring how compute-heavy AI capability is licensed elsewhere
 - "World models" of biology (mapping structure → function → design, not just structure prediction) as the next visible leap past AlphaFold-style structure prediction alone
 
+## Notable tools / instances
+- AlphaFold 3 (DeepMind) — structure prediction, the base most of the field builds on or benchmarks against
+
+## Key players
+- [[Isomorphic Labs]] — DeepMind spinout, AlphaFold-derived end-to-end drug design (IsoDDE), Lilly/Novartis deals
+- [[EvolutionaryScale]] — ESM-3 protein language model, ex-Meta FAIR team, general-purpose protein foundation models
+- [[Recursion Pharmaceuticals]] — high-throughput imaging + ML "TechBio" platform, longest-running public proof point either way
+
 ## Watch list
-- 
+- Isomorphic Labs and EvolutionaryScale blogs/releases
+- Recursion investor press releases
+- AlphaFold/Boltz-family papers on arXiv
 
 ## Connections
 **Parent:** [[Applications]]
@@ -40,3 +50,5 @@ related:
 **Depends on:** [[Foundation Model Training]]
 
 **Related:** [[AI for Scientific Discovery]]
+
+**Key players:** [[Isomorphic Labs]], [[EvolutionaryScale]], [[Recursion Pharmaceuticals]]

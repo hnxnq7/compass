@@ -27,8 +27,13 @@ related:
 ## What solutions feel inevitable?
 - Data-aware scaling laws (jointly modeling compute AND available high-quality data, including synthetic data quality) replacing pure compute-optimal framings
 
+## Key players
+- [[Epoch AI]] — the primary independent source quantifying compute/data/power constraints on scaling, not run by a lab with a stake in the answer
+- [[Google DeepMind]] — authored the Chinchilla compute-optimal scaling laws that this whole debate still measures itself against
+
 ## Watch list
--
+- epoch.ai/topics/scaling — Epoch AI's ongoing compute-trends and scaling-law tracking
+- DeepMind publications page for follow-ups to Chinchilla
 
 ## Connections
 **Parent:** [[Foundation Model Training]]
@@ -36,4 +41,6 @@ related:
 **Depends on:** [[AI Hardware & Compute]]
 
 **Related:** [[Synthetic Data Generation & Model Collapse]]
+
+**Key players:** [[Epoch AI]], [[Google DeepMind]]
 

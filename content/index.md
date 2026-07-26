@@ -75,23 +75,19 @@ A map of fields and problem spaces across tech/AI — how they nest (broad categ
 
 ## Entities
 
-A second, lighter layer alongside the fields above: the companies, labs, and projects actually doing the work. Each links into the fields it `works_in` — check a field's Backlinks panel to see who's active there, or an entity's own page for what it touches.
+A second, lighter layer alongside the fields above: the companies, labs, and projects actually doing the work (85 as of this writing). Each links into the fields it `works_in` — check a field's Backlinks panel to see who's active there, or an entity's own page for what it touches. Browse them by type in the Explorer sidebar under `Entities/`, or via the full list below.
 
-**Companies**
-- [[NVIDIA]] — dominant AI accelerator maker, full-stack across hardware/interconnect/systems
-- [[Cognition]] — Devin, autonomous coding agent
+**Companies (54)**
+[[AI21 Labs]] · [[AMI Labs]] · [[Anthropic]] · [[Arcee AI]] · [[Arize AI]] · [[Axiom]] · [[Ayar Labs]] · [[Braintrust]] · [[Cadence]] · [[Celestial AI]] · [[Cerebras]] · [[Cognition]] · [[Confident AI]] · [[CrewAI]] · [[Crusoe Energy]] · [[DeepSeek]] · [[Diffblue]] · [[E2B]] · [[EvolutionaryScale]] · [[Figure AI]] · [[General Intuition]] · [[Goodfire]] · [[Google DeepMind]] · [[Gray Swan AI]] · [[Groq]] · [[Harmonic]] · [[Harvey]] · [[Hippocratic AI]] · [[Hugging Face]] · [[Human Native AI]] · [[HumanLayer]] · [[Isomorphic Labs]] · [[LMArena]] · [[LangChain]] · [[Mistral AI]] · [[Mostly AI]] · [[NVIDIA]] · [[Numenta]] · [[Numerai]] · [[Oklo]] · [[OpenAI]] · [[Patronus AI]] · [[Periodic Labs]] · [[Physical Intelligence]] · [[Recursion Pharmaceuticals]] · [[Renaissance Technologies]] · [[Sakana AI]] · [[Scale AI]] · [[Sierra]] · [[Synopsys]] · [[Together AI]] · [[Two Sigma]] · [[Vertiv]] · [[World Labs]]
 
-**Academic Labs**
-- [[MIT PLV (Chlipala Lab)]] — machine-checked proofs for real systems
-- [[Xena Project (Imperial, Kevin Buzzard)]] — human-driven Lean formalization, incl. Fermat's Last Theorem
+**Academic Labs (8)**
+[[MIT CAP Group (Solar-Lezama Lab)]] · [[MIT HAN Lab (Song Han)]] · [[MIT Media Lab (Multisensory Intelligence Group)]] · [[MIT PLV (Chlipala Lab)]] · [[MadryLab (MIT)]] · [[UCLA Shams Lab (Multisensory Processing Lab)]] · [[UToPiA (UT Austin, Isil Dillig)]] · [[Xena Project (Imperial, Kevin Buzzard)]]
 
-**Open-Source Projects**
-- [[OpenCode]] — open-source, model-agnostic coding agent
-- [[OpenClaw]] — viral self-hosted personal agent
+**Open-Source Projects (9)**
+[[Letta]] · [[Mooncake]] · [[Neuronpedia]] · [[OpenClaw]] · [[OpenCode]] · [[Qwen (Alibaba)]] · [[RLHFlow]] · [[Unsloth]] · [[vLLM]]
 
-**Research Orgs**
-- [[Redwood Research]] — originated the "AI control" research agenda
-- [[0xPARC]] — zero-knowledge / programmable cryptography research & education hub
+**Research Orgs (14)**
+[[0xPARC]] · [[Allen Institute for AI (AI2)]] · [[Apollo Research]] · [[CSET (Georgetown)]] · [[Center for AI Safety (CAIS)]] · [[Common Crawl Foundation]] · [[Epoch AI]] · [[Flatiron Institute (Center for Computational Neuroscience)]] · [[FutureHouse]] · [[GovAI (Centre for the Governance of AI)]] · [[METR]] · [[Project Numina]] · [[Redwood Research]] · [[Thousand Brains Project]]
 
 ## Category legend
 - **compute** — chips, accelerators, interconnect, datacenters

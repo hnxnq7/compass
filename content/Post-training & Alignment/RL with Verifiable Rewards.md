@@ -33,8 +33,14 @@ related:
 ## Notable tools / instances
 - GRPO, DAPO, VAPO, and other REINFORCE-style group-relative RL variants
 
+## Key players
+- [[DeepSeek]] — introduced GRPO (DeepSeekMath) and shipped DeepSeek-R1, the reference implementation most 2026 RLVR work cites or builds on
+- [[Hugging Face]] — Open R1 reproduces DeepSeek-R1's GRPO pipeline in the open; TRL's GRPO trainer is a widely-used reference implementation
+- [[Qwen (Alibaba)]] — one of the earliest and most visible non-DeepSeek adopters of GRPO-style training for reasoning-mode models
+
 ## Watch list
--
+- github.com/huggingface/open-r1
+- DeepSeek's arXiv technical reports
 
 ## Connections
 **Parent:** [[Post-training & Alignment]]
@@ -44,4 +50,6 @@ related:
 **Enables:** [[Agents & Tool Use]]
 
 **Related:** [[Preference Optimization]]
+
+**Key players:** [[DeepSeek]], [[Hugging Face]], [[Qwen (Alibaba)]]
 

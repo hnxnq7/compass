@@ -27,7 +27,14 @@ related:
 - Held-out, periodically-refreshed private eval sets becoming standard practice specifically to blunt contamination incentives
 
 ## Watch list
--
+- epoch.ai trends database/blog and the FrontierMath leaderboard
+- Scale AI's SEAL leaderboards page
+- Arena (LMArena) leaderboard
+
+## Key players
+- [[Epoch AI]] — builds FrontierMath; its own held-out set became a contamination controversy after a funder (OpenAI) turned out to have access to most of the problem set, plus a later audit found errors in ~42% of problems
+- [[Scale AI]] — SEAL lab runs private, held-out leaderboards (Humanity's Last Exam, SWE-Bench Pro, GSM1k) specifically to keep eval data out of training corpora
+- [[LMArena]] — live, crowdsourced human-preference leaderboard that resists memorization-style contamination since votes are on fresh prompts, not a fixed test set
 
 ## Connections
 **Parent:** [[Evals]]

@@ -29,8 +29,14 @@ enables:
 - Hybrid local/global attention patterns (some layers local, some global) as the standard efficiency/quality compromise — already shipping (e.g. DeepSeek V4-Pro's hybrid attention cutting inference FLOPs to ~27% and KV cache to ~10% of its predecessor at 1M context)
 - This directly depends on [[Foundation Model Training]] architecture choices and directly enables agent workloads in [[Agents & Tool Use]] that need long, growing context
 
+## Key players
+- [[DeepSeek]] — V4's hybrid Compressed/Heavily-Compressed Sparse Attention is the concrete shipping example cited above
+- [[AI21 Labs]] — Jamba is the clearest production-grade hybrid Transformer-Mamba model, 256K effective context
+- [[Qwen (Alibaba)]] — Qwen3-Next's 3:1 linear/full attention ratio, matching ~32B-dense quality on <10% of the compute
+
 ## Watch list
--
+- DeepSeek, AI21 Labs, and Qwen technical reports/model releases (see Key players)
+- arXiv listings for hybrid/sparse attention papers (search terms: "hybrid attention," "linear attention," "long context")
 
 ## Connections
 **Parent:** [[Foundation Model Training]]
@@ -38,4 +44,6 @@ enables:
 **Enables:** [[Inference & Serving Systems]], [[Agents & Tool Use]]
 
 **Related:** [[Model Architecture Research]]
+
+**Key players:** [[DeepSeek]], [[AI21 Labs]], [[Qwen (Alibaba)]]
 

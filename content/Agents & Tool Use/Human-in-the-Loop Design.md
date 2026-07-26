@@ -34,8 +34,12 @@ related:
 - Cloud Security Alliance's "Agentic AI Autonomy Levels and Control Framework" (March 2026) — six-level autonomy/governance taxonomy
 - "Bounded Autonomy" — agents operate independently within strict guardrails, escalating to a human only when predefined situational boundaries are exceeded
 
+## Key players
+- [[HumanLayer]] — approval-as-API-primitive, routes agent pause/approve requests through Slack/email/SMS rather than a bespoke review UI
+
 ## Watch list
-- 
+- HumanLayer GitHub repo and changelog
+- EU AI Act Article 14 enforcement (effective Aug 2026) — regulatory pressure toward mandatory human oversight for high-risk agentic AI, worth tracking as it forces the "how much human is enough" question into law
 
 ## Connections
 **Parent:** [[Agents & Tool Use]]

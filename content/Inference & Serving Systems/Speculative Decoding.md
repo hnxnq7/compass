@@ -26,11 +26,23 @@ depends_on:
 - Speculative decoding as a default latency optimization at any serious inference provider, same category as quantization — not optional, just infrastructure
 - Adaptive variants that tune speculation depth/draft choice per-request based on observed acceptance rate, rather than a fixed static config
 
+## Notable tools / instances
+- EAGLE / EAGLE-2 / EAGLE-3 (SafeAI Lab, U Waterloo) — feature-uncertainty draft trees, now a standard vLLM/SGLang backend
+- Medusa — multiple decoding heads predicting several future tokens simultaneously
+
+## Key players
+- [[Together AI]] — ATLAS adaptive speculator keeps learning from live production traffic instead of freezing a draft model after offline training
+- [[DeepSeek]] — Multi-Token Prediction ships as a built-in draft mechanism trained alongside the main model, rather than a separately maintained draft model
+- [[vLLM]] — EAGLE/EAGLE-3, Medusa, and MTP all ship as first-class speculative decoding backends
+
 ## Watch list
--
+- Together AI engineering blog (ATLAS)
+- SafeAILab/EAGLE on GitHub
 
 ## Connections
 **Parent:** [[Inference & Serving Systems]]
 
 **Depends on:** [[Model Merging & Distillation]]
+
+**Key players:** [[Together AI]], [[DeepSeek]], [[vLLM]]
 

@@ -29,7 +29,14 @@ related:
 - Production-traffic-sampled eval sets (not just synthetic/curated ones) becoming standard practice specifically to close the lab-to-deployment gap
 
 ## Watch list
--
+- Braintrust blog/changelog
+- Arize AI blog, Phoenix (open-source) GitHub repo
+- LangChain's annual "State of AI Agents" report
+
+## Key players
+- [[Braintrust]] — unifies production traces, structured evals, and CI/CD quality gates into one workflow; a direct instance of evals-gating-releases rather than a pre-launch-only checkpoint
+- [[Arize AI]] — observability platform (incl. open-source Phoenix) purpose-built to evaluate on live production traffic rather than static curated sets, closing the lab-to-deployment gap this note describes
+- [[LangChain]] — LangSmith (their observability/tracing product) is one of the most widely adopted tools for tracing and evaluating agent runs in production
 
 ## Connections
 **Parent:** [[Evals]]

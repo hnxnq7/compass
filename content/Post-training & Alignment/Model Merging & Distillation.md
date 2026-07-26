@@ -27,8 +27,13 @@ enables:
 - Merging as a cheap alternative to a full extra RL pass for combining style/safety/capability tunes, especially for teams without frontier-scale compute
 - Distillation becoming the default path to cheap, fast models once a frontier "teacher" exists — most of the value has already moved downstream by the time a capability is a year old
 
+## Key players
+- [[Arcee AI]] — maintains MergeKit and DistillKit; merging/distillation as their entire product thesis rather than a side technique
+- [[Sakana AI]] — Evolutionary Model Merge, automated evolutionary search over merge recipes instead of hand-tuning
+
 ## Watch list
--
+- github.com/arcee-ai/mergekit releases
+- Sakana AI research blog
 
 ## Connections
 **Parent:** [[Post-training & Alignment]]
@@ -36,4 +41,6 @@ enables:
 **Enables:** [[Inference & Serving Systems]]
 
 **Related:** [[Supervised & Parameter-Efficient Fine-Tuning]]
+
+**Key players:** [[Arcee AI]], [[Sakana AI]]
 

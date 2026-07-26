@@ -27,8 +27,13 @@ related:
 - Continued bifurcation: frontier-most capability stays closed/API-gated, while a capability tier behind the frontier gets released open-weight — this is already the observable pattern rather than a prediction
 - Compute- or capability-threshold-based regulatory triggers (rather than blanket open/closed rules) becoming the standard regulatory mechanism, mirroring how [[AI Policy & Regulation]] frameworks are already structured
 
+## Key players
+- [[Hugging Face]] — the default hosting/distribution layer for open weights; makes "irreversible once released" literally true at infrastructure scale
+- [[Mistral AI]] — runs the open/closed bifurcation as an active commercial and sovereignty strategy, not a hypothetical
+
 ## Watch list
--
+- Stanford HAI Foundation Model Transparency Index
+- Hugging Face policy blog
 
 ## Connections
 **Parent:** [[Safety & Governance]]

@@ -22,10 +22,12 @@ works_in:
 - Adjacent to [[Proof Assistants & Formal Mathematics]] via shared reliance on Coq, though the group's focus is systems correctness rather than pure mathematics
 
 ## Notable work / recent moves
-- 
+- Extending the Bedrock2 verified-compilation approach with "omnisemantics" to prove timing upper bounds (Jamner, Kammer, Nag, Chlipala), ongoing as of Jan 2026
+- Two papers at PLDI'26 (June 2026): "Causality and Semantic Separation" (PL-style soundness/completeness theorems for causal-diagram d-separation) and "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs"
+- 2025: "Pyrosome: Verified Compilation for Modular Metatheory" (OOPSLA2) and "Securing Cryptographic Software via Typed Assembly Language" (CCS 2025)
 
 ## Watch list
-- plv.csail.mit.edu
+- plv.csail.mit.edu, and github.com/mit-plv (fiat-crypto, rewriter, bedrock2 repos)
 
 ## Connections
 **Works in:** [[Software Verification]], [[Proof Assistants & Formal Mathematics]]

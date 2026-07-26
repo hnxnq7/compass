@@ -39,9 +39,15 @@ related:
 - Sora 2, Veo 3.1, Kling, Seedance 2.0, HappyHorse-1.0 (pure video generation); World Labs' Marble (persistent 3D world generation, closer to "renderer")
 - Fei-Fei Li's June 2026 taxonomy is a useful filter for evaluating any "world model" claim: is it functioning as a **renderer** (generates plausible-looking scenes), a **simulator** (predicts consequences of actions), or a **planner** (uses that prediction to choose actions)? Most current video models are still mainly renderers.
 
+## Key players
+- [[Google DeepMind]] — Genie 3 is the sharpest existing example of the "simulator," not just "renderer," end of the render/simulate/plan taxonomy: real-time, navigable, action-conditioned 3D worlds, not fixed clips
+- [[AMI Labs]] — Yann LeCun's post-Meta startup ($1.03B seed, Mar 2026); explicit counter-bet against generative/autoregressive video models, building predictive world models instead
+- [[World Labs]] — Marble sits on the "renderer" end of the taxonomy: persistent, spatially coherent 3D generation
+- [[NVIDIA]] — Cosmos platform positions NVIDIA on the "simulator for physical AI" side, distinct from pure creative-video players
+
 ## Watch list
-*Labs, people, papers, accounts to track for this field.*
--
+- DeepMind Genie release notes; AMI Labs announcements
+- World Labs research blog; NVIDIA GTC keynotes (Cosmos updates)
 
 ## Connections
 **Parent:** [[Multimodal & World Models]]
@@ -51,4 +57,6 @@ related:
 **Enables:** [[Vision-Language-Action Models & Embodied Robotics]]
 
 **Related:** [[Agents & Tool Use]], [[Spatial Intelligence]]
+
+**Key players:** [[Google DeepMind]], [[AMI Labs]], [[World Labs]], [[NVIDIA]]
 

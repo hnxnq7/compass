@@ -28,8 +28,15 @@ related:
 - Narrow, deeply-integrated vertical copilots (built around one workflow, one dataset shape) continuing to outperform generic horizontal copilots dropped into a business unchanged
 - Evaluation moving in-house and continuous (see [[Real-World _ Deployment Evals|Real-World / Deployment Evals]]) as enterprises stop trusting vendor benchmarks for their own risk decisions
 
+## Key players
+- [[Harvey]] — legal copilot, $300M ARR by May 2026, majority of AmLaw 100 as customers — the field's clearest vertical-copilot success case
+- [[Sierra]] — customer-support agents, $15.8B valuation (May 2026); illustrative of the shift from copilot to autonomous agent
+- [[Hippocratic AI]] — healthcare voice agents scoped deliberately to non-diagnostic use, showing how regulated verticals layer safety scoping onto the capability problem
+
 ## Watch list
--
+- Harvey, Sierra, and Hippocratic AI's own blogs/announcements
+- Bessemer Venture Partners' vertical AI reporting
+- Gartner's enterprise agent adoption forecasts
 
 ## Connections
 **Parent:** [[Applications]]
@@ -37,4 +44,6 @@ related:
 **Depends on:** [[Agents & Tool Use]]
 
 **Related:** [[Real-World _ Deployment Evals|Real-World / Deployment Evals]]
+
+**Key players:** [[Harvey]], [[Sierra]], [[Hippocratic AI]]
 

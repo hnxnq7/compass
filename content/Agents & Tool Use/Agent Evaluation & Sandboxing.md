@@ -27,8 +27,13 @@ related:
 - Reliability-horizon-style reporting (success rate as a function of task duration, not a single pass/fail number) becoming the standard way to report agent capability
 - Sandboxed execution environments (code, browser, filesystem) becoming as standard for agent eval as unit tests are for software
 
+## Key players
+- [[METR]] — reliability-horizon methodology and independent pre-release evals for frontier labs
+- [[E2B]] — Firecracker-microVM sandboxing infra widely adopted as the execution layer under other agents
+
 ## Watch list
--
+- METR frontier risk reports and time-horizon updates
+- SWE-Marathon, SentinelBench, LeanMarathon — new long-horizon benchmark suites to watch for consolidation vs. continued fragmentation
 
 ## Connections
 **Parent:** [[Agents & Tool Use]]

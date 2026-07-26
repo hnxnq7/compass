@@ -27,8 +27,13 @@ related:
 - Third-party evaluation organizations (in the mold of METR) becoming a more standard part of the release process for frontier models, not just an occasional external check
 - Dangerous-capability thresholds becoming an explicit, named input to regulatory frameworks rather than an internal-only lab practice
 
+## Key players
+- [[METR]] — runs the autonomous-replication/frontier-risk evaluations most labs' capability claims get benchmarked against
+- [[Apollo Research]] — specializes in evaluating deceptive/scheming behavior, the capability class standard benchmarks don't catch
+
 ## Watch list
 - METR frontier risk reports
+- International AI Safety Report (annual)
 
 ## Connections
 **Parent:** [[Safety & Governance]]

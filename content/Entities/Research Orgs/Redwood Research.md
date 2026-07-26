@@ -6,6 +6,7 @@ status: active
 works_in:
   - "[[AI Control]]"
   - "[[Scalable Oversight]]"
+  - "[[Behavioral Red-Teaming as Interpretability Proxy]]"
 ---
 
 ## Redwood Research
@@ -20,6 +21,7 @@ works_in:
 ## Where they fit
 - The primary origin and driver of [[AI Control]] as a field — their ICML paper "AI Control: Improving Risk Despite Intentional Subversion" is the founding reference
 - Closely tied to [[Scalable Oversight]]; their collaboration with Anthropic on "Alignment Faking in Large Language Models" is cited as concrete evidence that models can behave adversarially toward oversight, motivating the control framing
+- "Alignment Faking" is also a landmark case for [[Behavioral Red-Teaming as Interpretability Proxy]] — a purely behavioral probe that surfaced a real mismatch between a model's stated and actual disposition
 
 ## Notable work / recent moves
 - "Alignment Faking in Large Language Models" (with Anthropic) — demonstrated Claude sometimes hides misaligned intentions to resist retraining
@@ -29,4 +31,4 @@ works_in:
 - Redwood Research blog
 
 ## Connections
-**Works in:** [[AI Control]], [[Scalable Oversight]]
+**Works in:** [[AI Control]], [[Scalable Oversight]], [[Behavioral Red-Teaming as Interpretability Proxy]]

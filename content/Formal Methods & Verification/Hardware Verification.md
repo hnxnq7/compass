@@ -30,10 +30,14 @@ related:
 - Knowledge-graph-augmented approaches to keep spec/RTL/assertion relationships explicit rather than relying on an LLM's implicit context window
 
 ## Notable tools / instances
-- Cadence Agentic Verification (multi-agent UVM/SVA generation), Saarthi ("first AI formal verification engineer" — plans, generates SVAs, proves properties, analyzes counterexamples/coverage), SVAgent, ProofLoop (tool-augmented ReAct agent with in-the-loop formal solvers)
+- Cadence ChipStack AI Super Agent (multi-agent UVM/SVA generation, built on Verisium/Jasper/Xcelium), Synopsys VSO.ai / Formal Advisor (AI-driven coverage convergence, spec-to-SVA generation), Saarthi from Infineon ("first AI formal verification engineer" — plans, generates SVAs, proves properties, analyzes counterexamples/coverage), SVAgent, ProofLoop (tool-augmented ReAct agent with in-the-loop formal solvers)
+
+## Key players
+- [[Cadence]] — dominant EDA vendor pushing agentic multi-step verification (ChipStack) as a shipped product, not a demo
+- [[Synopsys]] — Cadence's chief rival, shipping its own AI copilots (VSO.ai, Formal Advisor, AgentEngineer) across the same verification stack
 
 ## Watch list
-- DVCon proceedings
+- DVCon proceedings, Cadence newsroom, Synopsys.ai blog
 
 ## Connections
 **Parent:** [[Formal Methods & Verification]]

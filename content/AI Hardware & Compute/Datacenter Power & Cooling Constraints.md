@@ -28,8 +28,13 @@ related:
 - On-site/behind-the-meter power generation (gas turbines, eventually SMRs) for the largest training clusters, decoupling them from grid interconnect queues
 - Liquid cooling becoming mandatory rather than optional as rack density keeps climbing
 
+## Key players
+- [[Crusoe Energy]] — building gigawatt-scale behind-the-meter gas power for its own AI datacenters, the clearest live example of decoupling from grid interconnect queues
+- [[Vertiv]] — liquid cooling/power infrastructure vendor whose backlog tracks the industry's cooling transition directly
+- [[Oklo]] — SMR company with a signed, dated hyperscaler power deal (Meta), turning "eventually SMRs" into a real construction timeline
+
 ## Watch list
--
+- Vertiv earnings/backlog disclosures as a proxy for cooling-transition pace; Oklo NRC licensing milestones; Crusoe Energy buildout announcements
 
 ## Connections
 **Parent:** [[AI Hardware & Compute]]

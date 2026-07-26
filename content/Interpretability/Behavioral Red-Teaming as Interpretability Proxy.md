@@ -27,8 +27,16 @@ related:
 - Red-teaming and mechanistic interpretability converging as complementary evidence layers — behavioral probes to find failure modes, mechanistic analysis to explain and durably fix them
 - Insurance and regulatory requirements (AI Security Riders, EU AI Act obligations) making documented red-teaming a standard compliance artifact regardless of its epistemic limits
 
+## Key players
+- [[Apollo Research]] — pre-deployment scheming evals across frontier labs; explicit that behavioral findings are a lower bound needing mechanistic follow-up
+- [[Gray Swan AI]] — crowdsourced adversarial red-teaming at scale (15,000+ red teamers), incl. work with UK AISI
+- [[Redwood Research]] — "Alignment Faking in Large Language Models" (with Anthropic) is a landmark case of behavioral evidence for a real internal mismatch
+- [[Anthropic]] — runs frontier red-teaming and treats interpretability as the complement to behavioral probing, not a substitute
+
 ## Watch list
--
+- Apollo Research blog / Science page (apolloresearch.ai)
+- Gray Swan Research page (grayswan.ai/research)
+- OWASP Gen AI Security Project (AI red-teaming landscape reports)
 
 ## Connections
 **Parent:** [[Interpretability]]

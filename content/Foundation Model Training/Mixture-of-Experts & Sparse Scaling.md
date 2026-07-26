@@ -28,8 +28,14 @@ enables:
 - MoE as the default architecture for any frontier-scale open-weight release — by mid-2026 it's already the dominant pattern, adopted in over 60% of open releases
 - Latent/shared-expert variants (keeping total capacity high while shrinking active parameters further) becoming standard
 
+## Key players
+- [[DeepSeek]] — V3/V4's fine-grained + shared-expert MoE routing is the reference point most efficiency claims get measured against
+- [[Mistral AI]] — Mixtral 8x7B was one of the first widely-used open sparse-MoE models, helped make MoE the open-weight default
+- [[Qwen (Alibaba)]] — Qwen3-Next's ultra-sparse 80B-total/3B-active design pushes the active-parameter ratio further than most peers
+
 ## Watch list
--
+- DeepSeek, Mistral AI, and Qwen model/technical-report releases (see Key players)
+- Hugging Face's open-weight MoE model rankings for who's adopting the pattern next
 
 ## Connections
 **Parent:** [[Foundation Model Training]]
@@ -37,4 +43,6 @@ enables:
 **Enables:** [[Inference & Serving Systems]]
 
 **Related:** [[Model Architecture Research]]
+
+**Key players:** [[DeepSeek]], [[Mistral AI]], [[Qwen (Alibaba)]]
 

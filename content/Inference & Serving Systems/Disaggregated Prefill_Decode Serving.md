@@ -29,10 +29,16 @@ related:
 - Extending the same disaggregation idea further — separating attention from FFN layers, or separating encoder/prefill/decode for multimodal models
 
 ## Notable tools / instances
-- Splitwise, DistServe, MemServe, Mooncake, MegaScale-Infer (attention/FFN disaggregation), EPD-Serve (multimodal encoder/prefill/decode disaggregation)
+- Splitwise, DistServe, MemServe, MegaScale-Infer (attention/FFN disaggregation), EPD-Serve (multimodal encoder/prefill/decode disaggregation)
+
+## Key players
+- [[NVIDIA]] — Dynamo (GA March 2026) is becoming the reference orchestration layer, routing prefill/decode work across dedicated worker pools on top of vLLM/SGLang/TensorRT-LLM
+- [[Mooncake]] — Moonshot AI's KVCache-centric architecture pushed disaggregation from research paper into production traffic, now integrated with vLLM, SGLang, and Dynamo
+- [[vLLM]] — the open serving engine most disaggregation designs, including Dynamo, build on top of or integrate with
 
 ## Watch list
--
+- NVIDIA Dynamo GitHub/docs, kvcache-ai/Mooncake on GitHub
+- Hao AI Lab (UCSD) blog — publishes disaggregation retrospectives (they originated DistServe)
 
 ## Connections
 **Parent:** [[Inference & Serving Systems]]
@@ -40,4 +46,6 @@ related:
 **Depends on:** [[AI Accelerator Chips & Inference Silicon]]
 
 **Related:** [[KV-Cache Optimization & Compression]]
+
+**Key players:** [[NVIDIA]], [[Mooncake]], [[vLLM]]
 

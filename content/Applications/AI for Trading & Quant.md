@@ -30,8 +30,15 @@ related:
 - Continued 20%+ measured alpha gains specifically from alternative-data-plus-ML approaches, separate from any generative-AI hype cycle
 - Growing regulatory attention on AI-driven trading systems as they scale, following the same trajectory as [[AI Policy & Regulation]] elsewhere
 
+## Key players
+- [[Two Sigma]] — quant fund running an explicit 2026 "AI-first" mandate across research and operations, not just trading signals
+- [[Renaissance Technologies]] — the benchmark case for genuine ML-driven edge kept deliberately unpublished
+- [[Numerai]] — crowdsourced/blockchain-incentivized alternative to hiring quants in-house, backed by JPMorgan
+
 ## Watch list
-- 
+- Two Sigma's research/insights publications
+- Numerai's tournament results and blog
+- Industry alt-data / AI-in-trading reporting (public disclosures are the only real signal here, given the field's own opacity incentives)
 
 ## Connections
 **Parent:** [[Applications]]
@@ -39,3 +46,5 @@ related:
 **Depends on:** [[Agents & Tool Use]]
 
 **Related:** [[Real-World _ Deployment Evals|Real-World / Deployment Evals]]
+
+**Key players:** [[Two Sigma]], [[Renaissance Technologies]], [[Numerai]]

@@ -31,10 +31,14 @@ related:
 - Inference-specific silicon (optimized for memory bandwidth, not FLOPs) continuing to diverge from training silicon
 
 ## Notable tools / instances
-- Cerebras wafer-scale engine, NVIDIA Blackwell/Rubin lines, HBM4 memory generation
+- Cerebras Wafer Scale Engine, NVIDIA Blackwell/Rubin lines, HBM4 memory generation
+
+## Key players
+- [[Cerebras]] — wafer-scale architecture as a durable inference niche distinct from GPU clusters
+- [[Groq]] — LPU inference silicon; also the clearest live example of consolidation pressure in this space via its NVIDIA licensing deal
 
 ## Watch list
--
+- Cerebras and Groq press/blogs for inference benchmark and consolidation news; HBM4 rollout timelines from memory vendors (SK Hynix, Samsung, Micron)
 
 ## Connections
 **Parent:** [[AI Hardware & Compute]]

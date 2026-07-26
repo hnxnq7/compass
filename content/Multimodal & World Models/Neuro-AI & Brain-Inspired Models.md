@@ -28,11 +28,23 @@ related:
 - Cross-pollination with [[Multisensory Integration]] and [[Interpretability]] — both fields are converging on the same underlying question (how does a system, biological or artificial, combine and weight signal), just from opposite directions
 - RNN/state-space models explicitly designed around neurobiological temporal-integration principles gaining traction as a middle ground between pure ML architectures and biological plausibility
 
+## Notable tools / instances
+- EEG2Video — decodes dynamic visual perception (video) directly from EEG signals, a concrete example of the brain-decoding side of this field
+- MindCine, Neuro-3D — recent (2026) EEG/fMRI-to-video and EEG-to-3D reconstruction pipelines, part of the same wave of brain-decoding work
+
+## Key players
+- [[Numenta]] — longest-running "brain-inspired, not just brain-metaphor" company; NuPIC applies cortical-column-derived sparsity to run transformers efficiently on CPUs
+- [[Thousand Brains Project]] — nonprofit spun out of Numenta to carry the open Thousand Brains Theory research and its Monty framework forward outside a commercial roadmap
+- [[Flatiron Institute (Center for Computational Neuroscience)|Flatiron Institute — Center for Computational Neuroscience (CCN)]] — PI-led NeuroAI research (SueYeon Chung's group) on whether representational geometry is a shared computational currency between brains and deep nets
+
 ## Watch list
--
+- Numenta / Thousand Brains Project release notes (Monty framework)
+- Flatiron Institute CCN publications page
 
 ## Connections
 **Parent:** [[Multimodal & World Models]]
 
 **Related:** [[Multisensory Integration]], [[Interpretability]]
+
+**Key players:** [[Numenta]], [[Thousand Brains Project]], [[Flatiron Institute (Center for Computational Neuroscience)|Flatiron Institute — CCN]]
 

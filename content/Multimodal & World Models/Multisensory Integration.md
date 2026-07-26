@@ -29,14 +29,21 @@ related:
 - Energy-autonomous, self-powered multisensory hardware (e.g. triboelectric sensing) as a path toward multisensory robots that aren't tethered by sensor power budgets
 
 ## Notable tools / instances
-- MIT Media Lab's Multisensory Intelligence research group — the most direct academic anchor for this field
-- UCLA Multisensory Processing Lab (Shams Lab) — computational/behavioral research on human multisensory integration, relevant as ground truth for AI models to match against
+- GelSight Digit 360 tactile sensor (built with Meta AI) — imaging-based tactile sensing for robotic fingertips, the sensor-hardware side of this problem
+- Triboelectric, self-powered multisensory sensing frameworks (2026 academic work out of the Beijing Institute of Nanoenergy/UCAS/Georgia Tech) — early research toward energy-autonomous multisensory hardware
+
+## Key players
+- [[MIT Media Lab (Multisensory Intelligence Group)]] — Paul Pu Liang's group; the most direct academic anchor treating multisensory fusion itself as the research question
+- [[UCLA Shams Lab (Multisensory Processing Lab)]] — supplies the human/computational-neuroscience ground truth (reliability-weighted cue combination) that AI fusion models are implicitly trying to match
 
 ## Watch list
-- MIT Media Lab Multisensory Intelligence group publications
+- MIT Media Lab Multisensory Intelligence group publications (media.mit.edu/groups/multisensory-intelligence)
+- UCLA Shams Lab publications (shamslab.psych.ucla.edu)
 
 ## Connections
 **Parent:** [[Multimodal & World Models]]
 
 **Related:** [[Vision-Language-Action Models & Embodied Robotics]], [[Neuro-AI & Brain-Inspired Models]]
+
+**Key players:** [[MIT Media Lab (Multisensory Intelligence Group)]], [[UCLA Shams Lab (Multisensory Processing Lab)]]
 

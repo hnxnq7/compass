@@ -20,8 +20,8 @@ works_in:
 - The clearest commercial proof point for [[Coding Agents & AI Software Engineering]] and [[Long-Horizon Planning & Memory]] — Devin's core bet is that long-horizon, multi-step coding tasks can be handled reliably enough for real enterprise use, not just demos
 
 ## Notable work / recent moves
-- Valuation more than doubled to ~$26B in under nine months (2026)
-- Devin reached roughly $492M in annualized revenue with enterprise usage up >10x in 2026
+- Valuation more than doubled to ~\$26B in under nine months (2026)
+- Devin reached roughly \$492M in annualized revenue with enterprise usage up >10x in 2026
 - Enterprise customers reported publicly include Citi, Goldman Sachs, Mercedes-Benz, Dell, Santander, and government/defense clients (US Army, Navy, NASA-JPL)
 
 ## Watch list

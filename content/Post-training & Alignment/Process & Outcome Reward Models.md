@@ -26,11 +26,17 @@ enables:
 ## What solutions feel inevitable?
 - PRMs continuing to outperform ORMs on complex multi-step reasoning specifically because of the fine-grained credit assignment, pushing more labs to invest in them despite the annotation cost
 
+## Key players
+- [[OpenAI]] — "Let's Verify Step by Step" and PRM800K, the foundational dataset/paper the rest of the field still benchmarks against
+- [[RLHFlow]] — open-source PRM/ORM recipes and models (UIUC + Salesforce), a reproducible counterweight to closed PRM work
+
 ## Watch list
--
+- github.com/RLHFlow
 
 ## Connections
 **Parent:** [[Post-training & Alignment]]
 
 **Enables:** [[Preference Optimization]], [[RL with Verifiable Rewards]]
+
+**Key players:** [[OpenAI]], [[RLHFlow]]
 

@@ -28,7 +28,14 @@ related:
 - Evals moving into CI/CD (every PR, every prompt change ships with quality metrics) rather than being a pre-launch-only gate
 
 ## Watch list
--
+- Arena (LMArena) leaderboard and blog
+- Patronus AI blog/announcements (Lynx, GLIDER judge model updates)
+- DeepEval GitHub repo (release notes, new metrics)
+
+## Key players
+- [[LMArena]] — originated the technique itself: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (NeurIPS 2023) is the canonical validation study for LLM-as-judge
+- [[Patronus AI]] — builds proprietary judge models (Lynx for hallucination detection, GLIDER as a general judge) rather than just prompting a generic model to grade output
+- [[Confident AI]] — maker of DeepEval, an open-source framework built heavily around LLM-as-judge metrics (G-Eval etc.), reportedly running millions of evals a day inside customers' CI/CD pipelines
 
 ## Connections
 **Parent:** [[Evals]]

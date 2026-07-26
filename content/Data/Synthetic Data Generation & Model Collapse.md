@@ -30,8 +30,16 @@ related:
 - Held-out real-data test sets and distribution-overlap checks becoming a standard pipeline stage, not an afterthought
 - RAG-style live retrieval from human-maintained sources as a partial hedge against a synthetic-saturated web
 
+## Notable tools / instances
+- Gretel — synthetic data platform acquired by NVIDIA (2025, ~$320M+) and folded into NVIDIA's generative AI developer tooling
+- Apple's "Synthetic Data 2.0" — 2026 Siri overhaul built on synthetic data generated from proprietary user interactions rather than scraped web data
+
+## Key players
+- [[Mostly AI]] — long-running dedicated synthetic-data vendor (structured/tabular), a useful contrast case against open-ended generative collapse risk
+- [[Epoch AI]] — source of the human-data-exhaustion projections (2026-2032) that motivate the field's urgency
+
 ## Watch list
--
+- epoch.ai/data-insights, Epoch AI Substack (The Epoch Brief), arXiv "model collapse" search
 
 ## Connections
 **Parent:** [[Data]]
