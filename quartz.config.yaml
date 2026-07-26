@@ -21,25 +21,25 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f4f8fc"
+        lightgray: "#dbe6f0"
+        gray: "#93aec6"
+        darkgray: "#33475b"
+        dark: "#16283d"
+        secondary: "#2f6fb8"
+        tertiary: "#6ea3d8"
+        highlight: rgba(47, 111, 184, 0.13)
+        textHighlight: "#bfe0ff8c"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0e1a29"
+        lightgray: "#1e3350"
+        gray: "#4d719e"
+        darkgray: "#c3d6ea"
+        dark: "#eaf2fb"
+        secondary: "#6ea3d8"
+        tertiary: "#4d8fc7"
+        highlight: rgba(110, 163, 216, 0.13)
+        textHighlight: "#3d7ab588"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -137,6 +137,29 @@ plugins:
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      localGraph:
+        depth: 1
+        scale: 1.1
+        repelForce: 0.8
+        centerForce: 0.3
+        linkDistance: 45
+        fontSize: 0.55
+        opacityScale: 1
+        showTags: false
+        focusOnHover: true
+        enableRadial: false
+      globalGraph:
+        depth: -1
+        scale: 0.9
+        repelForce: 0.9
+        centerForce: 0.2
+        linkDistance: 45
+        fontSize: 0.5
+        opacityScale: 1
+        showTags: false
+        focusOnHover: true
+        enableRadial: true
     layout:
       position: right
       priority: 10
