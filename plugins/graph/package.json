@@ -1,5 +1,5 @@
 {
-  "name": "@quartz-community/graph",
+  "name": "@compass-local/graph",
   "version": "0.1.0",
   "description": "Interactive graph visualization component for Quartz - visualize your content as a network graph.",
   "type": "module",
