@@ -1,5 +1,5 @@
 ---
-title: Tech & AI Atlas
+title: Overview
 tags:
   - field-meta
 ---
