@@ -1,0 +1,43 @@
+---
+tags:
+  - field
+category: agents
+status: active
+parent:
+  - "[[Agents & Tool Use]]"
+related:
+  - "[[Scalable Oversight]]"
+  - "[[AI Control]]"
+  - "[[Spec-Driven Coding & Development]]"
+---
+
+## Problem Space: Human-in-the-Loop Design
+
+## What seems genuinely hard here?
+- There's no general formula for "how much human is enough" — the right answer depends on reversibility of the action, cost of a wrong action, and how well-calibrated the agent's own uncertainty is, and all three vary per task within the same project
+- Classifying a project once at the start ("this needs human review") undersells the real question, which is *where specifically* in the workflow, *what kind* of human judgment is needed there (approval? correction? just visibility?), and *how much* human time that actually costs at scale
+- Over-gating is its own failure mode: too many checkpoints and the human becomes a rubber stamp who stops actually reading — the same failure mode already flagged in [[Scalable Oversight]] applied at ordinary-project scale, not just frontier-model scale
+
+## Why hasn't it been solved?
+- Technical constraints — an agent's own confidence isn't a reliable signal for when it should ask for help; overconfident wrong answers and underconfident correct ones both break naive "ask when unsure" gating
+- Institutional / regulatory constraints — most teams pick a gating policy ad hoc per product rather than from a shared framework, so lessons don't transfer between projects or companies
+
+## What solutions feel fake?
+- "Human in the loop" as a checkbox/compliance answer, satisfied by inserting one generic approval step regardless of what's actually risky about the specific action
+
+## What solutions feel inevitable?
+- Graduated autonomy-level frameworks (explicit levels from fully-manual to fully-autonomous, closer to SAE's self-driving levels than a binary human/no-human split) becoming the standard vocabulary for scoping a project's oversight needs up front
+- Gating specifically on *irreversibility* (human approval required before anything that can't be undone, autonomous through everything reversible) as the most durable practical pattern, since it doesn't require trusting the agent's self-reported confidence
+- This becoming a standard part of the same spec that [[Spec-Driven Coding & Development]] argues should already be the source of truth — deciding gating policy is naturally a spec-time decision, not a runtime afterthought
+
+## Notable tools / instances
+- Cloud Security Alliance's "Agentic AI Autonomy Levels and Control Framework" (March 2026) — six-level autonomy/governance taxonomy
+- "Bounded Autonomy" — agents operate independently within strict guardrails, escalating to a human only when predefined situational boundaries are exceeded
+
+## Watch list
+- 
+
+## Connections
+**Parent:** [[Agents & Tool Use]]
+
+**Related:** [[Scalable Oversight]], [[AI Control]], [[Spec-Driven Coding & Development]]

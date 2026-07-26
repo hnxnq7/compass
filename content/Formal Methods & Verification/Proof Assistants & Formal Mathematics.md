@@ -32,6 +32,9 @@ related:
 - AlphaProof / AlphaProof Nexus (DeepMind) — autonomous proofs of 9 Erdős problems, May 2026
 - Lean 4, TorchLean (PyTorch↔Lean bridge), Math Inc.'s Gauss system (formalized sphere-packing-in-24-dimensions proof), Pythagoras-Prover
 
+## Key players
+- [[Xena Project (Imperial, Kevin Buzzard)]] — human-driven formalization at the frontier of pure math (leading the Fermat's Last Theorem formalization), a useful contrast to AI-driven provers like AlphaProof
+
 ## Watch list
 - Lean community announcements, DeepMind AlphaProof updates
 

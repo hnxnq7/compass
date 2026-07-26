@@ -36,6 +36,7 @@ enables:
 - [[Agent Evaluation & Sandboxing]]
 - [[Coding Agents & AI Software Engineering]]
 - [[Computer-Use & Browser Agents]]
+- [[Human-in-the-Loop Design]]
 - [[Long-Horizon Planning & Memory]]
 - [[Multi-Agent Systems]]
 

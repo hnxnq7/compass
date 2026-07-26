@@ -32,6 +32,10 @@ related:
 - Spec-driven workflows (write the spec, derive the plan, then generate code) replacing ad-hoc prompting as the default for anything beyond toy tasks — see [[Spec-Driven Coding & Development]]
 - Verification and coding agents converging: the same reliability problem (does this code actually do what's intended) connects this field directly to [[Software Verification]]
 
+## Key players
+- [[Cognition]] — Devin, one of the first commercially successful autonomous coding agents
+- [[OpenCode]] — open-source, model-agnostic counterpart to closed coding agents
+
 ## Watch list
 -
 

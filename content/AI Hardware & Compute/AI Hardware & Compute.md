@@ -30,6 +30,9 @@ enables:
 - Inference-specific silicon (optimized for memory bandwidth, not FLOPs) diverging further from training silicon
 - Optical interconnect replacing copper for rack-to-rack and eventually chip-to-chip links
 
+## Key players
+- [[NVIDIA]] — dominant AI accelerator maker, increasingly a full-stack player across silicon, interconnect, and systems software
+
 ## Children
 - [[AI Accelerator Chips & Inference Silicon]]
 - [[Datacenter Power & Cooling Constraints]]

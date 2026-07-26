@@ -8,6 +8,7 @@ parent:
 related:
   - "[[Software Verification]]"
   - "[[Coding Agents & AI Software Engineering]]"
+  - "[[Human-in-the-Loop Design]]"
 ---
 
 ## Problem Space: Spec-Driven Coding & Development
@@ -39,5 +40,5 @@ related:
 ## Connections
 **Parent:** [[Formal Methods & Verification]]
 
-**Related:** [[Software Verification]], [[Coding Agents & AI Software Engineering]]
+**Related:** [[Software Verification]], [[Coding Agents & AI Software Engineering]], [[Human-in-the-Loop Design]]
 

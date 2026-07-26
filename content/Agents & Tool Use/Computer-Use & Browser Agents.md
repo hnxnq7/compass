@@ -28,6 +28,9 @@ related:
 - Sandboxed, verifiable environments becoming the default training/eval substrate for this subfield specifically, since real production sites are too unstable a training target
 - Explicit confirmation/guardrail layers for irreversible actions (purchases, sends, deletes) becoming a standard product pattern, not left to individual agent judgment
 
+## Key players
+- [[OpenClaw]] — viral self-hosted personal agent with real filesystem/messaging permissions, a real-world stress test of this field's unresolved trust/permissions questions
+
 ## Watch list
 -
 

@@ -11,8 +11,10 @@ status: tracking
 Where the rest of the stack actually gets pointed at a real problem outside of AI research itself — this is the category most likely to keep growing new children as new verticals get "AI-ified."
 
 ## Children
+- [[AI for Biology, Genomics & Drug Discovery]]
 - [[AI for Math Proofs]]
 - [[AI for Scientific Discovery]]
+- [[AI for Trading & Quant]]
 - [[Enterprise AI & Vertical Copilots]]
 
 ## Cross-cutting notes

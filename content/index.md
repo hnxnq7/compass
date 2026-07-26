@@ -16,11 +16,14 @@ A map of fields and problem spaces across tech/AI — how they nest (broad categ
   - [[Agent Evaluation & Sandboxing]]
   - [[Coding Agents & AI Software Engineering]]
   - [[Computer-Use & Browser Agents]]
+  - [[Human-in-the-Loop Design]]
   - [[Long-Horizon Planning & Memory]]
   - [[Multi-Agent Systems]]
 - [[Applications]]
+  - [[AI for Biology, Genomics & Drug Discovery]]
   - [[AI for Math Proofs]]
   - [[AI for Scientific Discovery]]
+  - [[AI for Trading & Quant]]
   - [[Enterprise AI & Vertical Copilots]]
 - [[Data]]
   - [[Data Attribution & Provenance]]
@@ -36,6 +39,7 @@ A map of fields and problem spaces across tech/AI — how they nest (broad categ
   - [[Proof Assistants & Formal Mathematics]]
   - [[Software Verification]]
   - [[Spec-Driven Coding & Development]]
+  - [[Zero-Knowledge & Programmable Cryptography]]
 - [[Foundation Model Training]]
   - [[Long-Context & Hybrid Attention Architectures]]
   - [[Mixture-of-Experts & Sparse Scaling]]
@@ -63,10 +67,31 @@ A map of fields and problem spaces across tech/AI — how they nest (broad categ
   - [[RL with Verifiable Rewards]]
   - [[Supervised & Parameter-Efficient Fine-Tuning]]
 - [[Safety & Governance]]
+  - [[AI Control]]
   - [[AI Policy & Regulation]]
   - [[Dangerous Capability Evaluation]]
   - [[Open vs Closed Weight Governance]]
   - [[Scalable Oversight]]
+
+## Entities
+
+A second, lighter layer alongside the fields above: the companies, labs, and projects actually doing the work. Each links into the fields it `works_in` — check a field's Backlinks panel to see who's active there, or an entity's own page for what it touches.
+
+**Companies**
+- [[NVIDIA]] — dominant AI accelerator maker, full-stack across hardware/interconnect/systems
+- [[Cognition]] — Devin, autonomous coding agent
+
+**Academic Labs**
+- [[MIT PLV (Chlipala Lab)]] — machine-checked proofs for real systems
+- [[Xena Project (Imperial, Kevin Buzzard)]] — human-driven Lean formalization, incl. Fermat's Last Theorem
+
+**Open-Source Projects**
+- [[OpenCode]] — open-source, model-agnostic coding agent
+- [[OpenClaw]] — viral self-hosted personal agent
+
+**Research Orgs**
+- [[Redwood Research]] — originated the "AI control" research agenda
+- [[0xPARC]] — zero-knowledge / programmable cryptography research & education hub
 
 ## Category legend
 - **compute** — chips, accelerators, interconnect, datacenters
@@ -83,10 +108,14 @@ A map of fields and problem spaces across tech/AI — how they nest (broad categ
 - **evals** — benchmarks, eval methodology, leaderboards
 
 ## How this is organized
+
+**Fields** (the tree above) are problem spaces, not products — "Spec-Driven Coding & Development," not "Spec-Kit."
 - **`parent`** (frontmatter) = one primary broader field — the tree edge shown above. Root category notes (tagged `field-root`) have no parent.
 - **`depends_on` / `enables` / `related`** (frontmatter + each note's "Connections" section) = cross-links for interconnections that don't fit the tree — e.g. [[Coding Agents & AI Software Engineering]] lives under Agents but relates to [[Spec-Driven Coding & Development]] under Formal Methods. These are what make the sidebar graph a real graph, not just a tree.
 - Folders (`AI Hardware & Compute/`, `Data/`, etc.) group notes by category purely for browsing — they mirror `category:` but aren't what drives the graph.
-- Each note follows a "Problem Space" format: what's genuinely hard, why it hasn't been solved, what solutions feel fake vs. inevitable, notable concrete tools (kept as plain text, not graph nodes — the graph tracks fields, not products), and a watch list.
+- Each note follows a "Problem Space" format: what's genuinely hard, why it hasn't been solved, what solutions feel fake vs. inevitable, a watch list, and (where relevant) `## Notable tools / instances` for one-off products kept as plain text, not graph nodes.
+
+**Entities** (the second layer above) are organizations, labs, and projects with real sustained identity — a company, a lab, an open-source project. The bar for "gets a node" is *sustained identity*, not "was mentioned once": a single CLI flag or one paper stays plain text in a field's `Notable tools / instances`; the team/org behind it gets an entity page if it's worth tracking on its own. An entity's `works_in` frontmatter is its edge into the fields graph, mirrored in a `## Key players` section on the relevant field note(s) and a `## Connections` section on the entity's own page.
 
 ## Updating this
-This is a static site built from markdown with [Quartz](https://quartz.jzhao.xyz/) — every push to `main` rebuilds and redeploys it via GitHub Actions. To add a field: create a new note in the relevant category folder, set `category`/`status`/`parent` in frontmatter, fill in the Problem Space sections, and list its cross-links under `depends_on`/`enables`/`related` (and mirror them in a "Connections" section in the body so they show up in the graph). Push, and the site updates itself.
+This is a static site built from markdown with [Quartz](https://quartz.jzhao.xyz/) — every push to `main` rebuilds and redeploys it via GitHub Actions. To add a field: create a new note in the relevant category folder, set `category`/`status`/`parent` in frontmatter, fill in the Problem Space sections, and list its cross-links under `depends_on`/`enables`/`related` (mirrored in a body "Connections" section). To add an entity: copy `_templates/Entity Template.md` into `content/Entities/<Type>/`, set `works_in`, and add it to the relevant field note(s)' `## Key players` section. Push, and the site updates itself.

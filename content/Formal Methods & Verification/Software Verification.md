@@ -28,6 +28,9 @@ related:
 - LLM-assisted formalization (turning natural-language requirements into formal specs) lowering the historical labor bottleneck, the same shift already visible in [[Hardware Verification]] and [[Proof Assistants & Formal Mathematics]]
 - Convergence with [[Spec-Driven Coding & Development]]: both rest on the same premise — that a precise, checkable spec should be the source of truth — just aimed at different rigor levels (formal proof vs. practical correctness)
 
+## Key players
+- [[MIT PLV (Chlipala Lab)]] — machine-checked proofs for real systems (file systems, compilers, web languages), not just isolated algorithms
+
 ## Watch list
 -
 

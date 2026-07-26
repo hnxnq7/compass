@@ -11,6 +11,7 @@ status: tracking
 The technical and institutional work of keeping increasingly autonomous systems aligned, auditable, and legally accountable — spans research (scalable oversight) and policy (regulation, standards).
 
 ## Children
+- [[AI Control]]
 - [[AI Policy & Regulation]]
 - [[Dangerous Capability Evaluation]]
 - [[Open vs Closed Weight Governance]]
