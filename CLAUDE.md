@@ -21,11 +21,11 @@ Read `content/index.md` first — it's the actual homepage and documents the con
 
 ## Skills
 
-Two Claude Code skills at `~/.claude/skills/` (user-level — available in any session on this machine regardless of working directory, not project-scoped):
+Two Claude Code skills, committed into this repo at `.claude/skills/` (project-scoped — picked up automatically by any Claude Code session working in this repo, on any machine, no manual setup):
 - **`update-compass`** — lightweight, reactive. Fires on one new fact (a launch, a paper, something mentioned in conversation or turned up by a search). One or two small edits, then commits and pushes itself.
 - **`populate-compass`** — deliberate, research-heavy. For auditing/enriching a note or a whole batch: WebSearch per note, decide entity-vs-plain-text, create entity pages when warranted, flag (don't auto-create) new field/subfield gaps into `Field Backlog.md`.
 
-If you're on a different machine than where these were authored, they won't be present automatically — copy `~/.claude/skills/update-compass/` and `~/.claude/skills/populate-compass/` over, or ask to have them regenerated from this file's description of what they do.
+(A copy of both also lives at `~/.claude/skills/` on the machine they were authored on, as user-level skills available across any project there — that copy predates and is independent of the project-scoped one here; if you edit one, consider whether the other should match.)
 
 ## Bundled tooling
 
