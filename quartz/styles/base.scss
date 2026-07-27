@@ -159,6 +159,27 @@ a {
   }
 }
 
+// Width of the docked "graph view" split panel. Read by both the panel itself
+// (plugins/graph .global-graph-outer) and the body-push rule below.
+:root {
+  --dock-width: clamp(340px, 38vw, 640px);
+}
+
+// When graph view is open, narrow the whole body so the fixed dock on the right
+// never overlaps content — .page's existing `margin: 0 auto` just re-centers the
+// article within the reduced width. Skipped on small screens, where the dock
+// falls back to a full-screen overlay instead of a split.
+html.graph-docked body {
+  margin-right: var(--dock-width);
+  transition: margin-right 0.2s ease;
+}
+
+@media all and (max-width: 800px) {
+  html.graph-docked body {
+    margin-right: 0;
+  }
+}
+
 .page {
   max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;

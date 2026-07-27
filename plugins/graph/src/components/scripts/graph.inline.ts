@@ -76,6 +76,12 @@ import {
     // graph. Persisted across renders/pages so the toggle sticks as you browse.
     var entitiesToggleKey = "graph-show-entities";
 
+    // Whether the docked "graph view" split panel is open. Persisted so it stays
+    // open as you navigate — including graph-node clicks, which are full page loads
+    // (window.location.href) rather than SPA transitions, so an in-memory flag or a
+    // class on <html> wouldn't survive them.
+    var dockStateKey = "graph-docked-open";
+
     function getShowEntities(configDefault) {
       var stored = localStorage.getItem(entitiesToggleKey);
       if (stored === null) return configDefault !== false;
@@ -280,18 +286,23 @@ import {
       var light = resolveColor(styles.getPropertyValue("--light").trim(), "#f5f5f5");
       var bodyFont = styles.getPropertyValue("--bodyFont").trim() || "inherit";
 
-      // Capped so a page with an unusually large fan-out (e.g. an index/meta page
-      // that legitimately links to everything) doesn't render as one dominating
-      // dot — most nodes are well under the cap and are unaffected.
-      var maxNodeRadius = 9;
+      // Node size loosely encodes connectedness, but deliberately gently: the curve
+      // is shallow and capped so an ordinary hub never balloons. The current page is
+      // marked by COLOR (--secondary), not size, so it gets a fixed modest radius
+      // regardless of degree — otherwise, on a high-fan-out page (e.g. the meta
+      // homepage, which links to nearly everything) it would pin to the cap and read
+      // as one giant central dot swallowing its neighbours.
+      var maxNodeRadius = 6;
+      var currentNodeRadius = 4;
       function nodeRadiusFor(d) {
+        if (d.id === slug) return currentNodeRadius;
         var numLinks = 0;
         for (var i = 0; i < graphLinks.length; i++) {
           if (graphLinks[i].source.id === d.id || graphLinks[i].target.id === d.id) {
             numLinks++;
           }
         }
-        return Math.min(2 + Math.sqrt(numLinks), maxNodeRadius);
+        return Math.min(2 + Math.sqrt(numLinks) * 0.8, maxNodeRadius);
       }
 
       var app = new PIXI.Application();
@@ -333,6 +344,12 @@ import {
       var linkRenderData = [];
       var hoveredNodeId = null;
       var hoveredNeighbours = new Set();
+      // Sticky focus: in the docked/global graph we keep the current page's Markov
+      // blanket (the node + its direct neighbours) emphasized by default, as if it
+      // were permanently hovered. Mousing over another node overrides it; mousing
+      // away falls back to this instead of un-focusing the whole graph. Null in the
+      // local graph, which is already depth-limited to the blanket anyway.
+      var stickyFocusId = null;
       var dragStartTime = 0;
       var dragging = false;
       var currentTransform = d3.zoomIdentity;
@@ -399,18 +416,33 @@ import {
         }
       }
 
+      // Single source of truth for label visibility. When a node is focused (hovered,
+      // or the sticky current-page focus in the docked graph) we reveal the labels of
+      // its ENTIRE Markov blanket — the focused node plus every direct neighbour — and
+      // hide the rest, so you can read the whole neighbourhood at a glance rather than
+      // hovering nodes one at a time. With no focus, labels fall back to the landmark
+      // floor (category roots stay legible) lifted by the current zoom level, matching
+      // the zoom handler's own formula.
       function renderLabels() {
         var defaultScale = 1 / scale;
         var activeScale = defaultScale * 1.1;
+        var zoomScale = currentTransform.k * opacityScale;
+        var scaleOpacity = Math.max((zoomScale - 1) / 3.75, 0);
 
         for (var i = 0; i < nodeRenderData.length; i++) {
           var nodeData = nodeRenderData[i];
-          if (hoveredNodeId === nodeData.simulationData.id) {
-            nodeData.label.alpha = 1;
-            nodeData.label.scale.set(activeScale);
+          var id = nodeData.simulationData.id;
+          var label = nodeData.label;
+          var nodeTags = nodeData.simulationData.tags || [];
+          var isLandmark = nodeTags.indexOf("field-root") !== -1;
+
+          if (hoveredNodeId !== null) {
+            label.alpha = hoveredNeighbours.has(id) ? 1 : 0;
           } else {
-            nodeData.label.scale.set(defaultScale);
+            label.alpha = Math.max(scaleOpacity, isLandmark ? 0.85 : 0);
           }
+
+          label.scale.set(id === hoveredNodeId ? activeScale : defaultScale);
         }
       }
 
@@ -468,24 +500,21 @@ import {
         gfx.cursor = "pointer";
         gfx.label = nodeId;
 
-        (function (n, g, labelRef) {
-          var oldLabelOpacity = 0;
-          g.on("pointerover", function (e) {
+        (function (n, g) {
+          g.on("pointerover", function () {
             updateHoverInfo(n.id);
-            oldLabelOpacity = labelRef.alpha;
             if (!dragging) {
               renderPixiFromD3();
             }
           });
 
           g.on("pointerleave", function () {
-            updateHoverInfo(null);
-            labelRef.alpha = oldLabelOpacity;
+            updateHoverInfo(stickyFocusId);
             if (!dragging) {
               renderPixiFromD3();
             }
           });
-        })(node, gfx, label);
+        })(node, gfx);
 
         nodesContainer.addChild(gfx);
 
@@ -559,7 +588,7 @@ import {
           event.subject.fx = null;
           event.subject.fy = null;
           dragging = false;
-          updateHoverInfo(null);
+          updateHoverInfo(stickyFocusId);
           renderPixiFromD3();
 
           if (Date.now() - dragStartTime < 500) {
@@ -665,8 +694,16 @@ import {
         requestAnimationFrame(animate);
       }
 
+      // The docked/global graph (depth < 0, i.e. !isLocalView) opens already focused
+      // on the current page's Markov blanket; the local graph is depth-limited to that
+      // blanket to begin with, so it needs no sticky focus.
+      if (!isLocalView && nodeMap.has(slug)) {
+        stickyFocusId = slug;
+      }
+
       simulation.on("tick", function () {});
       simulation.restart();
+      updateHoverInfo(stickyFocusId);
       renderPixiFromD3();
       animate();
 
@@ -701,7 +738,8 @@ import {
 
     var globalContainers = [];
     var globalIcons = [];
-    var documentClickHandler = null;
+    var closeButtons = [];
+    var closeClickHandler = null;
     var documentKeydownHandler = null;
     var iconClickHandler = null;
     var entitiesToggles = [];
@@ -709,6 +747,9 @@ import {
 
     function hideGlobalGraph() {
       cleanupGlobal();
+      // Un-narrow the body (see html.graph-docked in base.scss).
+      document.documentElement.classList.remove("graph-docked");
+      localStorage.setItem(dockStateKey, "false");
       for (var i = 0; i < globalContainers.length; i++) {
         globalContainers[i].classList.remove("active");
         var sidebar = globalContainers[i].closest(".sidebar");
@@ -719,6 +760,12 @@ import {
     }
 
     function anyGlobalGraphActive() {
+      // The <html> class is the source of truth: unlike the .active class on the
+      // panel (which a SPA DOM-morph can drop on navigation), it always survives, so
+      // the dock reliably re-opens itself after you click through to another page.
+      if (document.documentElement.classList.contains("graph-docked")) {
+        return true;
+      }
       for (var i = 0; i < globalContainers.length; i++) {
         if (globalContainers[i].classList.contains("active")) {
           return true;
@@ -729,6 +776,9 @@ import {
 
     function showGlobalGraph() {
       cleanupGlobal();
+      // Narrow the body so the fixed dock doesn't overlap content (base.scss).
+      document.documentElement.classList.add("graph-docked");
+      localStorage.setItem(dockStateKey, "true");
       var currentSlug = getSlugFromUrl();
       for (var i = 0; i < globalContainers.length; i++) {
         var container = globalContainers[i];
@@ -825,19 +875,21 @@ import {
         entitiesToggles[i].addEventListener("click", entitiesToggleClickHandler);
       }
 
-      if (documentClickHandler) {
-        document.removeEventListener("click", documentClickHandler);
-      }
-      documentClickHandler = function (e) {
-        if (anyGlobalGraphActive()) {
-          var inContainer = e.target.closest(".global-graph-container");
-          var inIcon = e.target.closest(".global-graph-icon");
-          if (!inContainer && !inIcon) {
-            hideGlobalGraph();
-          }
+      // The docked graph is a persistent split panel, so it does NOT close on an
+      // outside click (that would fight navigation — every node click is "outside").
+      // It closes via the in-panel × button, the globe toggle, or Escape.
+      if (closeClickHandler) {
+        for (var i = 0; i < closeButtons.length; i++) {
+          closeButtons[i].removeEventListener("click", closeClickHandler);
         }
+      }
+      closeButtons = Array.from(document.querySelectorAll(".global-graph-close"));
+      closeClickHandler = function () {
+        hideGlobalGraph();
       };
-      document.addEventListener("click", documentClickHandler);
+      for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener("click", closeClickHandler);
+      }
 
       if (documentKeydownHandler) {
         document.removeEventListener("keydown", documentKeydownHandler);
@@ -857,7 +909,10 @@ import {
       };
       document.addEventListener("keydown", documentKeydownHandler);
 
-      if (anyGlobalGraphActive()) {
+      // Re-open the dock if it was open before this navigation. anyGlobalGraphActive()
+      // covers SPA transitions (the <html> class survives); the localStorage check
+      // covers full page loads from graph-node clicks and fresh sessions.
+      if (anyGlobalGraphActive() || localStorage.getItem(dockStateKey) === "true") {
         showGlobalGraph();
       }
     }

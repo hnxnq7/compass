@@ -107,6 +107,9 @@ export default ((userOpts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
+          <button class="global-graph-close" aria-label="Close graph view">
+            ×
+          </button>
           <button
             class="entities-toggle entities-toggle-global"
             aria-pressed="true"
