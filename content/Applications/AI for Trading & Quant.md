@@ -30,6 +30,9 @@ related:
 - Continued 20%+ measured alpha gains specifically from alternative-data-plus-ML approaches, separate from any generative-AI hype cycle
 - Growing regulatory attention on AI-driven trading systems as they scale, following the same trajectory as [[AI Policy & Regulation]] elsewhere
 
+## Notable tools / instances
+- **Empirical Asset Pricing via Machine Learning** (Gu, Kelly, Xiu — Yale/Chicago Booth, Review of Financial Studies 2020) — the canonical academic paper comparing ML methods (trees, neural nets, regression) on cross-sectional return prediction; the reference point for what "genuine ML edge" looks like in the public literature, versus the unpublished proprietary edge this note's whole framing revolves around
+
 ## Key players
 - [[Two Sigma]] — quant fund running an explicit 2026 "AI-first" mandate across research and operations, not just trading signals
 - [[Renaissance Technologies]] — the benchmark case for genuine ML-driven edge kept deliberately unpublished

@@ -19,4 +19,4 @@ Everything about perceiving and generating across modalities beyond text — vid
 
 ## Cross-cutting notes
 - Fei-Fei Li's June 2026 taxonomy splits "world model" claims into three honest functions — renderer, simulator, planner — which is a useful filter for every subfield below: which of the three is a given system actually doing?
-- Money is visibly rotating from pure language models toward this cluster (World Labs' $1B raise backed by Nvidia/AMD/Autodesk is the clearest signal) on the bet that spatial/embodied understanding is the next unlock, not just bigger LLMs.
+- Money is visibly rotating from pure language models toward this cluster (World Labs' \$1B raise backed by Nvidia/AMD/Autodesk is the clearest signal) on the bet that spatial/embodied understanding is the next unlock, not just bigger LLMs.

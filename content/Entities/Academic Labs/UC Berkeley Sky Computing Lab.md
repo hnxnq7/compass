@@ -25,7 +25,7 @@ works_in:
 ## Notable work / recent moves
 - MT-Bench/Chatbot Arena's core finding — GPT-4-as-judge agrees with human preference rankings over 80% of the time, comparable to human-human agreement — is the empirical basis nearly every production LLM-as-judge deployment leans on
 - Continues publishing systems research (serving, agentic infra) alongside the evaluation lineage that produced Arena
-- The lab's NovaSky team open-sourced Sky-T1 (Jan 2025) — a 32B reasoning model reproducing o1-preview-level math/code performance for under $450 of training compute, releasing data and code as a fully reproducible RLVR-adjacent recipe — and followed with SkyRL, an open RL post-training framework for reasoning models
+- The lab's NovaSky team open-sourced Sky-T1 (Jan 2025) — a 32B reasoning model reproducing o1-preview-level math/code performance for under \$450 of training compute, releasing data and code as a fully reproducible RLVR-adjacent recipe — and followed with SkyRL, an open RL post-training framework for reasoning models
 
 ## Watch list
 - sky.cs.berkeley.edu, sky.cs.berkeley.edu/projects

@@ -31,6 +31,7 @@ related:
 ## Notable tools / instances
 - GelSight Digit 360 tactile sensor (built with Meta AI) — imaging-based tactile sensing for robotic fingertips, the sensor-hardware side of this problem
 - Triboelectric, self-powered multisensory sensing frameworks (2026 academic work out of the Beijing Institute of Nanoenergy/UCAS/Georgia Tech) — early research toward energy-autonomous multisensory hardware
+- **Humans Integrate Visual and Haptic Information in a Statistically Optimal Fashion** (Ernst & Banks, Nature 2002) — the landmark result establishing that biological multisensory fusion is reliability-weighted (roughly MLE-optimal cue combination), the computational-neuroscience target that AI fusion architectures are implicitly trying to match
 
 ## Key players
 - [[MIT Media Lab (Multisensory Intelligence Group)]] — Paul Pu Liang's group; the most direct academic anchor treating multisensory fusion itself as the research question

@@ -38,16 +38,20 @@ related:
 ## Notable tools / instances
 - Sora 2, Veo 3.1, Kling, Seedance 2.0, HappyHorse-1.0 (pure video generation); World Labs' Marble (persistent 3D world generation, closer to "renderer")
 - Fei-Fei Li's June 2026 taxonomy is a useful filter for evaluating any "world model" claim: is it functioning as a **renderer** (generates plausible-looking scenes), a **simulator** (predicts consequences of actions), or a **planner** (uses that prediction to choose actions)? Most current video models are still mainly renderers.
+- **World Models** ("Recurrent World Models Facilitate Policy Evolution," Ha & Schmidhuber, NeurIPS 2018) — the founding paper for the whole category: train a compressed generative model of an environment, then train (or "dream") a policy inside it; the direct ancestor of the PlaNet/Dreamer line and the conceptual root of every current "world model" product claim
+- Notable result: DeepMind's Dreamer V3 (successor to the Ha & Schmidhuber lineage) was the first algorithm to collect diamonds in Minecraft from scratch with no human data or curriculum, a concrete benchmark result for model-based "imagination" actually transferring to a hard, long-horizon task
 
 ## Key players
 - [[Google DeepMind]] — Genie 3 is the sharpest existing example of the "simulator," not just "renderer," end of the render/simulate/plan taxonomy: real-time, navigable, action-conditioned 3D worlds, not fixed clips
-- [[AMI Labs]] — Yann LeCun's post-Meta startup ($1.03B seed, Mar 2026); explicit counter-bet against generative/autoregressive video models, building predictive world models instead
+- [[AMI Labs]] — Yann LeCun's post-Meta startup (\$1.03B seed, Mar 2026); explicit counter-bet against generative/autoregressive video models, building predictive world models instead
 - [[World Labs]] — Marble sits on the "renderer" end of the taxonomy: persistent, spatially coherent 3D generation
 - [[NVIDIA]] — Cosmos platform positions NVIDIA on the "simulator for physical AI" side, distinct from pure creative-video players
+- [[Berkeley Robot Learning Lab (Pieter Abbeel)]] — academic origin of the model-based-RL side of "world models" (PlaNet/Dreamer lineage), grounding the simulator/planner end of the taxonomy in a decade of research that predates the generative-video product wave
 
 ## Watch list
 - DeepMind Genie release notes; AMI Labs announcements
 - World Labs research blog; NVIDIA GTC keynotes (Cosmos updates)
+- rll.berkeley.edu (Robot Learning Lab publications)
 
 ## Connections
 **Parent:** [[Multimodal & World Models]]
@@ -58,5 +62,5 @@ related:
 
 **Related:** [[Agents & Tool Use]], [[Spatial Intelligence]]
 
-**Key players:** [[Google DeepMind]], [[AMI Labs]], [[World Labs]], [[NVIDIA]]
+**Key players:** [[Google DeepMind]], [[AMI Labs]], [[World Labs]], [[NVIDIA]], [[Berkeley Robot Learning Lab (Pieter Abbeel)]]
 

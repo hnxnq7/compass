@@ -31,7 +31,7 @@ related:
 - RAG-style live retrieval from human-maintained sources as a partial hedge against a synthetic-saturated web
 
 ## Notable tools / instances
-- Gretel — synthetic data platform acquired by NVIDIA (2025, ~$320M+) and folded into NVIDIA's generative AI developer tooling
+- Gretel — synthetic data platform acquired by NVIDIA (2025, ~\$320M+) and folded into NVIDIA's generative AI developer tooling
 - Apple's "Synthetic Data 2.0" — 2026 Siri overhaul built on synthetic data generated from proprietary user interactions rather than scraped web data
 - **AI models collapse when trained on recursively generated data** (Shumailov, Shumaylov, Zhao, Gal et al. — Oxford/Cambridge, Nature 2024; preprint as "The Curse of Recursion," 2023) — the paper that named and formally characterized model collapse across VAEs, Gaussian mixture models, and LLMs; the standard citation for the phenomenon this field is named after
 - **Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data** (Gerstgrasser et al., 2024) — the key follow-up result showing collapse is avoidable if synthetic data accumulates alongside (rather than replaces) real data across generations; the evidence behind this note's "feels fake" framing that ratio, not volume, is what matters

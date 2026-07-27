@@ -27,9 +27,14 @@ related:
 - Continued bifurcation: frontier-most capability stays closed/API-gated, while a capability tier behind the frontier gets released open-weight — this is already the observable pattern rather than a prediction
 - Compute- or capability-threshold-based regulatory triggers (rather than blanket open/closed rules) becoming the standard regulatory mechanism, mirroring how [[AI Policy & Regulation]] frameworks are already structured
 
+## Notable tools / instances
+- **On the Societal Impact of Open Foundation Models** (Kapoor, Bommasani, Klyman, Longpre et al., Stanford CRFM, 2024) — the reference framing paper for weighing open-release marginal risk against marginal benefit, cited by most subsequent policy proposals that try to move past "open bad / closed good" as a binary
+- Stanford Foundation Model Transparency Index (Bommasani, Liang et al., ongoing since 2023) — scores major labs on release-practice disclosure; the closest thing this field has to a standardized scorecard rather than a one-off audit
+
 ## Key players
 - [[Hugging Face]] — the default hosting/distribution layer for open weights; makes "irreversible once released" literally true at infrastructure scale
 - [[Mistral AI]] — runs the open/closed bifurcation as an active commercial and sovereignty strategy, not a hypothetical
+- [[Stanford CRFM (Percy Liang)]] — publishes the Foundation Model Transparency Index and the leading academic framing of open-weight societal-impact tradeoffs
 
 ## Watch list
 - Stanford HAI Foundation Model Transparency Index
@@ -39,4 +44,6 @@ related:
 **Parent:** [[Safety & Governance]]
 
 **Related:** [[AI Policy & Regulation]], [[Dangerous Capability Evaluation]]
+
+**Key players:** [[Hugging Face]], [[Mistral AI]], [[Stanford CRFM (Percy Liang)]]
 

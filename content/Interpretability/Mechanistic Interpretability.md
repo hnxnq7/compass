@@ -32,17 +32,22 @@ enables:
 ## Notable tools / instances
 - Sparse autoencoders (SAEs), CircuitLasso (scalable sparse-regression circuit learning)
 - Gemma Scope 2 — DeepMind's open SAE/transcoder toolkit across every Gemma 3 size (270M–27B params)
+- **A Mathematical Framework for Transformer Circuits** (Elhage et al., Anthropic, 2021) — the founding formalization of attention-head/MLP circuits as the unit of mechanistic analysis
+- **Toy Models of Superposition** (Elhage et al., Anthropic, 2022) — the paper that made "superposition" the field's central hard problem, showing small networks with more features than dimensions
+- **Towards Monosemanticity: Decomposing Language Models With Dictionary Learning** (Anthropic, 2023) — introduced sparse autoencoders as a practical tool for pulling monosemantic features out of superposed activations, the direct ancestor of Gemma Scope and Neuronpedia's toolset
 
 ## Key players
 - [[Anthropic]] — leading frontier lab on circuit tracing; first to fold interpretability findings into a pre-deployment safety review (Claude Sonnet 4.5)
 - [[Google DeepMind]] — dedicated mech interp team (led by Neel Nanda, ex-Anthropic) shipped Gemma Scope 2, the largest open-source SAE toolkit
 - [[Goodfire]] — startup selling hosted interpretability-as-a-service (Ember API) built on SAE feature discovery
 - [[Neuronpedia]] — open-source platform for exploring/visualizing SAE features; partnered with DeepMind on the Gemma Scope public demo
+- [[Bau Lab (Northeastern)]] — academic lab behind ROME/MEMIT causal tracing and model editing; co-authored the 2025 "Open Problems in Mechanistic Interpretability" field survey with Neel Nanda and Yonatan Belinkov
 
 ## Watch list
 - Transformer Circuits Thread (transformer-circuits.pub)
 - Mechanistic Interpretability Workshop @ ICML (mechinterpworkshop.com)
 - Neuronpedia
+- baulab.info
 
 ## Connections
 **Parent:** [[Interpretability]]
