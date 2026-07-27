@@ -31,9 +31,12 @@ related:
 ## Notable tools / instances
 - AlphaProof / AlphaProof Nexus (DeepMind) — autonomous proofs of 9 Erdős problems, May 2026
 - Lean 4, TorchLean (PyTorch↔Lean bridge), Math Inc.'s Gauss system (formalized sphere-packing-in-24-dimensions proof), Pythagoras-Prover
+- **Solving Olympiad Geometry Without Human Demonstrations** (Trinh, Wu, Le, He, Luong — DeepMind/NYU, Nature 2024) — the AlphaGeometry paper; solved 25 of 30 IMO geometry benchmark problems (vs. 10 for the prior best method), the landmark result for synthetic-data-trained, human-demonstration-free theorem proving
+- **The Lean Mathematical Library** (mathlib community, CPP 2020) — describes mathlib's design; the single unified library nearly all Lean formalization work, human- and AI-driven alike, builds on top of
 
 ## Key players
 - [[Xena Project (Imperial, Kevin Buzzard)]] — human-driven formalization at the frontier of pure math (leading the Fermat's Last Theorem formalization), a useful contrast to AI-driven provers like AlphaProof
+- [[CMU ICARM (Jeremy Avigad)]] — Lean co-designer and mathlib maintainer, now directing an NSF-funded institute explicitly built around the AI/formal-proof intersection — the AI-forward complement to Xena's human-driven approach
 
 ## Watch list
 - Lean community announcements, DeepMind AlphaProof updates

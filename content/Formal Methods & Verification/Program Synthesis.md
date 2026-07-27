@@ -30,6 +30,8 @@ related:
 ## Notable tools / instances
 *Concrete instances worth having on file even though the field, not the tool, is what's tracked on the graph.*
 - Diffblue Cover — RL-search-based (not LLM) Java unit test generation, correctness-by-construction rather than plausible-looking output
+- **Combinatorial Sketching for Finite Programs** (Solar-Lezama, Rabbah, Bodík, Ebcioğlu — ASPLOS 2006) — the original Sketch paper; the "specify an incomplete program, let the synthesizer fill the holes" formulation that's widely credited with reigniting program synthesis as an active research field
+- **Automating String Processing in Spreadsheets Using Input-Output Examples** (Gulwani, POPL 2011) — the FlashFill paper; the programming-by-example landmark that shipped into Excel and remains the most-cited example of a commercially successful PBE system
 
 ## Key players
 - [[MIT CAP Group (Solar-Lezama Lab)]] — originated Sketch/Rosette, arguably reignited program synthesis as an active research field

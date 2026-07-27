@@ -33,12 +33,16 @@ related:
 ## Notable tools / instances
 - Cloud Security Alliance's "Agentic AI Autonomy Levels and Control Framework" (March 2026) — six-level autonomy/governance taxonomy
 - "Bounded Autonomy" — agents operate independently within strict guardrails, escalating to a human only when predefined situational boundaries are exceeded
+- **Cooperative Inverse Reinforcement Learning** (Hadfield-Menell, Russell, Abbeel, Dragan — Berkeley, NeurIPS 2016) — formalized the human-AI relationship as a shared-reward "assistance game," the theoretical basis most graduated-autonomy framing descends from
+- **The Off-Switch Game** (Hadfield-Menell, Dragan, Abbeel, Russell — Berkeley, IJCAI 2017) — formal conditions under which a rational agent won't resist being paused or shut down; the reference paper for "corrigibility"
 
 ## Key players
 - [[HumanLayer]] — approval-as-API-primitive, routes agent pause/approve requests through Slack/email/SMS rather than a bespoke review UI
+- [[Berkeley CHAI (Stuart Russell)]] — academic origin of assistance games and corrigibility, the theoretical layer underneath product-level gating decisions
 
 ## Watch list
 - HumanLayer GitHub repo and changelog
+- humancompatible.ai for new CHAI publications
 - EU AI Act Article 14 enforcement (effective Aug 2026) — regulatory pressure toward mandatory human oversight for high-risk agentic AI, worth tracking as it forces the "how much human is enough" question into law
 
 ## Connections

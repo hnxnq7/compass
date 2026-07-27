@@ -32,11 +32,15 @@ related:
 
 ## Notable tools / instances
 - GRPO, DAPO, VAPO, and other REINFORCE-style group-relative RL variants
+- **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models** (Shao, Wang et al., DeepSeek-AI, 2024) — introduced GRPO itself; the paper nearly every group-relative RLVR method cites as its origin
+- **DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning** (DeepSeek-AI, 2025) — showed pure RLVR (no SFT warm-start, in the R1-Zero variant) can elicit long chain-of-thought reasoning from a base model; the result that made "RLVR as the dominant post-training paradigm for reasoning" a 2026 consensus rather than a bet
+- Sky-T1 (UC Berkeley Sky Computing Lab, NovaSky team, Jan 2025) — reproduced o1-preview-level math/code reasoning for under $450 of training compute with fully open data and code, the notable result that made GRPO-style reasoning RL reproducible outside a frontier lab's budget
 
 ## Key players
 - [[DeepSeek]] — introduced GRPO (DeepSeekMath) and shipped DeepSeek-R1, the reference implementation most 2026 RLVR work cites or builds on
 - [[Hugging Face]] — Open R1 reproduces DeepSeek-R1's GRPO pipeline in the open; TRL's GRPO trainer is a widely-used reference implementation
 - [[Qwen (Alibaba)]] — one of the earliest and most visible non-DeepSeek adopters of GRPO-style training for reasoning-mode models
+- [[UC Berkeley Sky Computing Lab]] — Sky-T1/SkyRL, the field's clearest fully-open academic reproduction of GRPO-style reasoning RL outside a frontier lab's compute budget
 
 ## Watch list
 - github.com/huggingface/open-r1
@@ -51,5 +55,5 @@ related:
 
 **Related:** [[Preference Optimization]]
 
-**Key players:** [[DeepSeek]], [[Hugging Face]], [[Qwen (Alibaba)]]
+**Key players:** [[DeepSeek]], [[Hugging Face]], [[Qwen (Alibaba)]], [[UC Berkeley Sky Computing Lab]]
 

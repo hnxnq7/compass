@@ -28,13 +28,18 @@ related:
 - On-site/behind-the-meter power generation (gas turbines, eventually SMRs) for the largest training clusters, decoupling them from grid interconnect queues
 - Liquid cooling becoming mandatory rather than optional as rack density keeps climbing
 
+## Notable tools / instances
+- **United States Data Center Energy Usage Report** (Shehabi et al. — LBNL, DOE, first published 2016, updated 2024/2025) — the report nearly every rack-power and grid-demand figure in this space traces back to
+- Notable result: Google/DeepMind's 2016 ML-based cooling control cut datacenter cooling energy by ~40%, the earliest widely-cited proof that software (not just hardware) can move the efficiency needle — now table stakes rather than novel, which is part of why the field has moved on to harder physical constraints (grid interconnect, on-site generation)
+
 ## Key players
 - [[Crusoe Energy]] — building gigawatt-scale behind-the-meter gas power for its own AI datacenters, the clearest live example of decoupling from grid interconnect queues
 - [[Vertiv]] — liquid cooling/power infrastructure vendor whose backlog tracks the industry's cooling transition directly
 - [[Oklo]] — SMR company with a signed, dated hyperscaler power deal (Meta), turning "eventually SMRs" into a real construction timeline
+- [[LBNL Energy Technologies Area]] — DOE national lab producing the field's reference datacenter-energy-demand numbers, independent of vendor/operator self-reporting
 
 ## Watch list
-- Vertiv earnings/backlog disclosures as a proxy for cooling-transition pace; Oklo NRC licensing milestones; Crusoe Energy buildout announcements
+- Vertiv earnings/backlog disclosures as a proxy for cooling-transition pace; Oklo NRC licensing milestones; Crusoe Energy buildout announcements; LBNL Data Center Energy Usage Report updates
 
 ## Connections
 **Parent:** [[AI Hardware & Compute]]

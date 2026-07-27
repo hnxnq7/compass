@@ -27,22 +27,24 @@ depends_on:
 - Adaptive variants that tune speculation depth/draft choice per-request based on observed acceptance rate, rather than a fixed static config
 
 ## Notable tools / instances
-- EAGLE / EAGLE-2 / EAGLE-3 (SafeAI Lab, U Waterloo) — feature-uncertainty draft trees, now a standard vLLM/SGLang backend
+- **Fast Inference from Transformers via Speculative Decoding** (Leviathan, Kalman & Matias, Google, ICML 2023) and **Accelerating Large Language Model Decoding with Speculative Sampling** (Chen et al., DeepMind, 2023) — the two papers that introduced the core idea concurrently: draft cheaply with a small model, verify losslessly against the target model's distribution
+- **EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty** (Li, Wei, Zhang & Zhang, SafeAI Lab/U Waterloo, ICML 2024) — drafts at the feature level rather than token level; 2.1-3.8x speedup over vanilla decoding on MT-Bench, now a standard vLLM/SGLang backend (EAGLE-2/EAGLE-3 add dynamic draft trees)
 - Medusa — multiple decoding heads predicting several future tokens simultaneously
 
 ## Key players
 - [[Together AI]] — ATLAS adaptive speculator keeps learning from live production traffic instead of freezing a draft model after offline training
 - [[DeepSeek]] — Multi-Token Prediction ships as a built-in draft mechanism trained alongside the main model, rather than a separately maintained draft model
 - [[vLLM]] — EAGLE/EAGLE-3, Medusa, and MTP all ship as first-class speculative decoding backends
+- [[SafeAI Lab (Waterloo, Hongyang Zhang)]] — originated the EAGLE series, the academic anchor in an otherwise company-only field
 
 ## Watch list
 - Together AI engineering blog (ATLAS)
-- SafeAILab/EAGLE on GitHub
+- SafeAILab/EAGLE on GitHub, hongyanz.github.io
 
 ## Connections
 **Parent:** [[Inference & Serving Systems]]
 
 **Depends on:** [[Model Merging & Distillation]]
 
-**Key players:** [[Together AI]], [[DeepSeek]], [[vLLM]]
+**Key players:** [[Together AI]], [[DeepSeek]], [[vLLM]], [[SafeAI Lab (Waterloo, Hongyang Zhang)]]
 

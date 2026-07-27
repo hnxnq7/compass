@@ -27,9 +27,14 @@ related:
 - The EU AI Act (fully enforceable August 2, 2026) becoming the de facto global baseline the way GDPR did for privacy, since multinational companies build to the strictest applicable regime
 - Continued regulatory attention shifting specifically toward autonomous agents (not just models) as the unit of concern, following NIST's 2026 agent-standards initiative
 
+## Notable tools / instances
+- **Frontier AI Regulation: Managing Emerging Risks to Public Safety** (Anderljung, Barnhart, Korinek, Leung et al., GovAI/multi-institution, 2023) — the most-cited framing paper for the "standard-setting, licensing, and mechanisms to verify compliance" approach most 2026 frontier-model regulation now assumes as a starting structure
+- International AI Safety Report (chaired by Yoshua Bengio, annual since 2025) — the closest thing the field has to an IPCC-style consensus document across the 1,000+ national policy initiatives this note's "why hasn't it been solved" section counts
+
 ## Key players
 - [[CSET (Georgetown)]] — the empirical research US federal policymakers (Congress, DoD) actually cite on AI/compute/national security
 - [[GovAI (Centre for the Governance of AI)]] — Oxford-affiliated foundational research on compute thresholds and international coordination mechanisms
+- [[MIT AI Policy Forum]] — academic convening body working the sector-specific implementation gap (mobility, finance, healthcare) between policy principles and enforceable rules
 
 ## Watch list
 - OECD AI Policy Observatory
@@ -39,4 +44,6 @@ related:
 **Parent:** [[Safety & Governance]]
 
 **Related:** [[Data Attribution & Provenance]], [[Open vs Closed Weight Governance]]
+
+**Key players:** [[CSET (Georgetown)]], [[GovAI (Centre for the Governance of AI)]], [[MIT AI Policy Forum]]
 

@@ -26,13 +26,19 @@ related:
 - Narrower specialist agents composed together, with clear task boundaries and a coordinator, beating one generalist agent specifically for high-stakes or highly parallel workflows
 - Multi-agent architectures converging on a small number of well-tested coordination patterns rather than continued bespoke design per product
 
+## Notable tools / instances
+- **Generative Agents: Interactive Simulacra of Human Behavior** (Park, O'Brien, Cai, Morris, Liang, Bernstein — Stanford, UIST 2023) — the canonical "believable multi-agent society" paper; a sandbox of LLM agents with memory that produced emergent social behavior (planning a party, spreading information) without being scripted to
+- **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation** (Wu et al. — Microsoft Research, COLM 2024) — the widely-adopted conversable-agent framework paper, a reference point for the "coordinator + specialist agents" pattern this note treats as inevitable
+
 ## Key players
 - [[LangChain]] — LangGraph's explicit-state, explicit-handoff graph model, the most widely adopted production substrate
 - [[CrewAI]] — role-based, low-friction alternative design point; useful signal for which coordination pattern actually wins in production
+- [[Oxford FLAIR (Jakob Foerster)]] — foundational multi-agent RL lab (coordination, communication protocols, JaxMARL infrastructure); the academic anchor for this field's RL-trained (not just LLM-prompted) coordination research
 
 ## Watch list
 - LangGraph GitHub releases
 - CrewAI GitHub releases
+- blog.foersterlab.com for FLAIR's transition into Foerster's new Oxford lab
 
 ## Connections
 **Parent:** [[Agents & Tool Use]]

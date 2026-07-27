@@ -28,11 +28,16 @@ related:
 - LLM-assisted formalization (turning natural-language requirements into formal specs) lowering the historical labor bottleneck, the same shift already visible in [[Hardware Verification]] and [[Proof Assistants & Formal Mathematics]]
 - Convergence with [[Spec-Driven Coding & Development]]: both rest on the same premise — that a precise, checkable spec should be the source of truth — just aimed at different rigor levels (formal proof vs. practical correctness)
 
+## Notable tools / instances
+- **seL4: Formal Verification of an OS Kernel** (Klein et al., SOSP 2009) — the first machine-checked proof of functional correctness for a complete, general-purpose OS kernel; still the reference point for what full-scale (not toy-example) formal verification looks like, and seL4 remains deployed in real safety-critical systems today
+- **Formal Verification of a Realistic Compiler** (Leroy, CACM 2009) — the CompCert paper; machine-checked proof that a C compiler preserves program semantics, frequently paired with seL4 as the two projects that proved OS/compiler-scale verification was possible at all
+
 ## Key players
 - [[MIT PLV (Chlipala Lab)]] — machine-checked proofs for real systems (file systems, compilers, web languages), not just isolated algorithms
+- [[Trustworthy Systems (UNSW, CSIRO Data61)]] — built seL4, the standing proof that full OS-kernel-scale formal verification is achievable and deployable, not just a bounded-subsystem demo
 
 ## Watch list
--
+- sel4.systems, trustworthy.systems, plv.csail.mit.edu
 
 ## Connections
 **Parent:** [[Formal Methods & Verification]]

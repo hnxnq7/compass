@@ -27,6 +27,10 @@ related:
 ## What solutions feel inevitable?
 - Data-aware scaling laws (jointly modeling compute AND available high-quality data, including synthetic data quality) replacing pure compute-optimal framings
 
+## Notable tools / instances
+- **Scaling Laws for Neural Language Models** (Kaplan et al., OpenAI, 2020) — the paper that started the empirical scaling-law era, showing loss follows a power law in model size, data, and compute
+- **Training Compute-Optimal Large Language Models** (Hoffmann et al., DeepMind, NeurIPS 2022) — "Chinchilla"; overturned Kaplan's implied parameter/data ratio by showing most contemporary LLMs were undertrained, validated by training a 70B model on 1.4T tokens that beat the 280B Gopher trained on ~300B tokens at equal compute
+
 ## Key players
 - [[Epoch AI]] — the primary independent source quantifying compute/data/power constraints on scaling, not run by a lab with a stake in the answer
 - [[Google DeepMind]] — authored the Chinchilla compute-optimal scaling laws that this whole debate still measures itself against

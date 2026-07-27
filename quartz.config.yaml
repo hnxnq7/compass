@@ -141,9 +141,9 @@ plugins:
       localGraph:
         depth: 1
         scale: 1.1
-        repelForce: 0.8
-        centerForce: 0.3
-        linkDistance: 45
+        repelForce: 0.5
+        centerForce: 0.45
+        linkDistance: 35
         fontSize: 0.55
         opacityScale: 1
         showTags: false
@@ -152,14 +152,14 @@ plugins:
       globalGraph:
         depth: -1
         scale: 0.9
-        repelForce: 0.9
-        centerForce: 0.2
-        linkDistance: 45
+        repelForce: 0.5
+        centerForce: 0.4
+        linkDistance: 35
         fontSize: 0.5
         opacityScale: 1
         showTags: false
         focusOnHover: true
-        enableRadial: true
+        enableRadial: false
     layout:
       position: right
       priority: 10

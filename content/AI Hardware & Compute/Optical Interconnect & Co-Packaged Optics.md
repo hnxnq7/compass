@@ -30,11 +30,13 @@ enables:
 
 ## Notable tools / instances
 - NVIDIA CPO-based switches (targeting ~409.6 Tb/s, 512×800Gb/s ports), Broadcom co-packaged optics
+- **Single-chip microprocessor that communicates directly using light** (Sun, Timurdogan, Yaacobi, Stojanovic, Popovic et al. — MIT/UC Berkeley/CU Boulder, Nature 2015) — the landmark demo proving monolithic electronic-photonic integration in an unmodified commercial CMOS foundry process; the paper the field points to as proof CPO isn't just a lab curiosity, and the direct research lineage behind Ayar Labs' founding
 
 ## Key players
 - [[NVIDIA]] — pushing CPO switches into production and backing optics suppliers directly (see Ayar Labs)
 - [[Ayar Labs]] — NVIDIA-backed optical I/O chiplets aimed squarely at the scale-up (chip-to-chip) transition this note flags as next
 - [[Celestial AI]] — optical memory/interconnect fabric attacking the same bottleneck from the memory-bandwidth side rather than raw I/O
+- [[Columbia Lightwave Research Laboratory (Keren Bergman)]] — leading academic lab on optical interconnect systems/networking, DARPA/SRC-funded, upstream of the commercial CPO push
 
 ## Watch list
 - Ayar Labs and Celestial AI press for first commercial silicon shipping; NVIDIA/Broadcom CPO switch production timelines

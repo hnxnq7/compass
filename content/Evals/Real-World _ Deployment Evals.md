@@ -28,6 +28,9 @@ related:
 - Evaluation embedded directly into the deployment pipeline (every PR, every prompt change gated on quality metrics) rather than a one-time pre-launch checkpoint
 - Production-traffic-sampled eval sets (not just synthetic/curated ones) becoming standard practice specifically to close the lab-to-deployment gap
 
+## Notable tools / instances
+- **Holistic Evaluation of Language Models (HELM)** (Liang, Bommasani et al., Stanford CRFM, 2022) — evaluates models across dozens of real-world scenarios and multiple metrics (accuracy, robustness, fairness, efficiency) rather than one leaderboard number; the closest academia has come to a standard for multi-scenario, deployment-relevant evaluation
+
 ## Watch list
 - Braintrust blog/changelog
 - Arize AI blog, Phoenix (open-source) GitHub repo
@@ -37,6 +40,7 @@ related:
 - [[Braintrust]] — unifies production traces, structured evals, and CI/CD quality gates into one workflow; a direct instance of evals-gating-releases rather than a pre-launch-only checkpoint
 - [[Arize AI]] — observability platform (incl. open-source Phoenix) purpose-built to evaluate on live production traffic rather than static curated sets, closing the lab-to-deployment gap this note describes
 - [[LangChain]] — LangSmith (their observability/tracing product) is one of the most widely adopted tools for tracing and evaluating agent runs in production
+- [[Stanford CRFM (Percy Liang)]] — built and maintains HELM, the academic anchor for multi-scenario, multi-metric evaluation aimed at closing the lab-to-deployment gap rather than optimizing a single benchmark number
 
 ## Connections
 **Parent:** [[Evals]]

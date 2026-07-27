@@ -28,6 +28,11 @@ enables:
 - MoE as the default architecture for any frontier-scale open-weight release — by mid-2026 it's already the dominant pattern, adopted in over 60% of open releases
 - Latent/shared-expert variants (keeping total capacity high while shrinking active parameters further) becoming standard
 
+## Notable tools / instances
+- **Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer** (Shazeer et al., Google, ICLR 2017) — the foundational MoE paper; introduced the sparsely-gated layer this entire field descends from
+- **Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity** (Fedus, Zoph & Shazeer, Google, JMLR 2022) — top-1 routing simplification that made trillion-parameter MoE training practical, still the reference simplicity/quality tradeoff point
+- **MegaBlocks: Efficient Sparse Training with Mixture-of-Experts** (Gale, Narayanan, Young & Zaharia — Stanford/Microsoft Research/Google, MLSys 2023) — block-sparse GPU kernels that removed the token-dropping tradeoff earlier MoE training frameworks forced; one of the few academically-rooted systems contributions in a mostly industry-run field
+
 ## Key players
 - [[DeepSeek]] — V3/V4's fine-grained + shared-expert MoE routing is the reference point most efficiency claims get measured against
 - [[Mistral AI]] — Mixtral 8x7B was one of the first widely-used open sparse-MoE models, helped make MoE the open-weight default

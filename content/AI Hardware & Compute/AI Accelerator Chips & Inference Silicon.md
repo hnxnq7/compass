@@ -32,10 +32,13 @@ related:
 
 ## Notable tools / instances
 - Cerebras Wafer Scale Engine, NVIDIA Blackwell/Rubin lines, HBM4 memory generation
+- **Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks** (Chen, Emer, Sze — MIT, ISSCC/JSSC 2016) — introduced the "row-stationary" dataflow, the reference point for dataflow-optimized (rather than just FLOP-maximizing) accelerator design that inference-specific silicon still builds on
+- **In-Datacenter Performance Analysis of a Tensor Processing Unit** (Jouppi et al. — Google, ISCA 2017) — the TPU paper; the canonical case for domain-specific inference ASICs in production, reporting 15-30x throughput and 30-80x energy-efficiency gains over contemporaneous CPUs/GPUs on real datacenter workloads
 
 ## Key players
 - [[Cerebras]] — wafer-scale architecture as a durable inference niche distinct from GPU clusters
 - [[Groq]] — LPU inference silicon; also the clearest live example of consolidation pressure in this space via its NVIDIA licensing deal
+- [[MIT EEMS Group (Vivienne Sze)]] — academic source of Eyeriss and the row-stationary dataflow methodology that shaped how accelerator energy efficiency is measured industry-wide
 
 ## Watch list
 - Cerebras and Groq press/blogs for inference benchmark and consolidation news; HBM4 rollout timelines from memory vendors (SK Hynix, Samsung, Micron)

@@ -28,11 +28,18 @@ related:
 - Programmable cryptography (ZK, FHE, MPC, obfuscation) generalizing past blockchain-specific use cases into verified computation and privacy-preserving ML more broadly, as circuit tooling matures
 - Convergence with formal verification proper — proving a ZK circuit actually implements its intended computation is itself a formal-methods problem, not a separable one
 
+## Notable tools / instances
+- **The Knowledge Complexity of Interactive Proof Systems** (Goldwasser, Micali, Rackoff, 1985/1989) — the foundational paper that defined zero-knowledge proofs in the first place; every later SNARK/STARK construction is downstream of this
+- **On the Size of Pairing-Based Non-interactive Arguments** (Groth, EUROCRYPT 2016) — "Groth16," the most widely deployed practical zk-SNARK construction, still the default in many production systems for its small constant proof size
+- **Scalable, Transparent, and Post-Quantum Secure Computational Integrity** (Ben-Sasson, Bentov, Horesh, Riabzev, 2018) — the STARK paper; the quantum-resistant, no-trusted-setup alternative to pairing-based SNARKs
+- Notable deployment: Zcash (2016, built on Ben-Sasson et al.'s earlier SNARK work) — the first large-scale real-world deployment of zk-SNARKs, proving the primitive could run in production rather than just in papers
+
 ## Key players
 - [[0xPARC]] — research/education hub for ZK, MPC, FHE, and obfuscation, closely tied to the Ethereum ecosystem
+- [[Berkeley RDI (Ion Stoica)]] — runs a dedicated academic ZKP research program (with Dawn Song among the faculty involved) that produced Libra, an early proof system with both optimal prover time and succinct proof size, plus a widely-used public ZKP course; a more traditional university crypto-theory counterpart to 0xPARC's industry-adjacent research/education model
 
 ## Watch list
-- 
+- rdi.berkeley.edu/zkp
 
 ## Connections
 **Parent:** [[Formal Methods & Verification]]

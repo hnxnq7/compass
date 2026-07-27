@@ -30,13 +30,15 @@ enables:
 ## Notable tools / instances
 - NeMo Curator (NVIDIA) — GPU-native dedup/filtering pipeline (RAPIDS/cuDF, Dask) for large-scale pretraining corpora
 - RefinedWeb, FineWeb (Hugging Face), DataComp-LM — deduplicated, filtered Common-Crawl-derived corpora that have become de facto quality benchmarks for curation pipelines
+- **DataComp: In Search of the Next Generation of Multimodal Datasets** (Gadre, Schmidt et al., NeurIPS 2023 Datasets & Benchmarks) — the reference benchmark that isolates curation as the experimental variable by fixing model/training code; its DataComp-1B baseline beat OpenAI's original CLIP by 3.7 points on ImageNet zero-shot using identical compute, direct evidence that curation alone moves the needle
 
 ## Key players
 - [[Allen Institute for AI (AI2)]] — one of the few orgs publishing a full open filtering/dedup toolchain (Dolma) alongside the model actually trained on it (OLMo)
 - [[Common Crawl Foundation]] — the raw web corpus nearly every filtering pipeline in the field starts from and defines itself against
+- [[Schmidt Lab (Stanford)]] — Ludwig Schmidt's group; created and continues to extend the DataComp/DataComp-LM benchmarks that turned curation into a competitively measurable research problem
 
 ## Watch list
-- allenai.org/blog, commoncrawl.org blog, DataComp-LM leaderboard
+- allenai.org/blog, commoncrawl.org blog, DataComp-LM leaderboard, datacomp.ai
 
 ## Connections
 **Parent:** [[Data]]

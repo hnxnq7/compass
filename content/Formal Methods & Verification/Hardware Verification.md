@@ -31,10 +31,13 @@ related:
 
 ## Notable tools / instances
 - Cadence ChipStack AI Super Agent (multi-agent UVM/SVA generation, built on Verisium/Jasper/Xcelium), Synopsys VSO.ai / Formal Advisor (AI-driven coverage convergence, spec-to-SVA generation), Saarthi from Infineon ("first AI formal verification engineer" — plans, generates SVAs, proves properties, analyzes counterexamples/coverage), SVAgent, ProofLoop (tool-augmented ReAct agent with in-the-loop formal solvers)
+- **VerilogEval: Evaluating Large Language Models for Verilog Code Generation** (NVIDIA Research, ICCAD 2023) — the de facto standard benchmark (built on HDLBits problems) that essentially every LLM-for-RTL paper since has evaluated against
+- Notable result: AlphaEvolve (Google DeepMind, 2025) found a Verilog rewrite that removed unnecessary bits in a TPU matrix-multiplication circuit, which was integrated into an upcoming production TPU — a rare case of LLM-assisted RTL change shipping into real silicon rather than staying a benchmark result
 
 ## Key players
 - [[Cadence]] — dominant EDA vendor pushing agentic multi-step verification (ChipStack) as a shipped product, not a demo
 - [[Synopsys]] — Cadence's chief rival, shipping its own AI copilots (VSO.ai, Formal Advisor, AgentEngineer) across the same verification stack
+- [[UC Berkeley SLICE Lab (Sophia Shao)]] — academic counterpart to the EDA vendors' agentic pipelines, studying the underlying hallucinated-RTL failure mode (e.g. "Haven") that makes formal coverage checking necessary in the first place
 
 ## Watch list
 - DVCon proceedings, Cadence newsroom, Synopsys.ai blog

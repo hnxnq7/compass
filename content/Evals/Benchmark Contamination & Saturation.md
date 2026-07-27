@@ -26,6 +26,10 @@ related:
 - Continuous, harder-tier benchmark replacement (GPQA-style and domain-specific evals replacing saturated general ones) as a permanent treadmill rather than a one-time fix
 - Held-out, periodically-refreshed private eval sets becoming standard practice specifically to blunt contamination incentives
 
+## Notable tools / instances
+- **Time Travel in LLMs: Tracing Data Contamination in Large Language Models** (Golchin & Surdeanu, University of Arizona, 2023) — the "guided instruction" detection method (92-100% accuracy vs. manual audits) that's become the standard citation for black-box contamination detection
+- **Detecting Pretraining Data from Large Language Models** (Shi, Ajith, Xia, Chen, Zettlemoyer et al., ICLR 2024) — introduces Min-K% Prob, a reference-free membership-inference method, plus the WikiMIA ground-truth benchmark; the closest thing the field has to a standard toolkit
+
 ## Watch list
 - epoch.ai trends database/blog and the FrontierMath leaderboard
 - Scale AI's SEAL leaderboards page
@@ -35,6 +39,7 @@ related:
 - [[Epoch AI]] — builds FrontierMath; its own held-out set became a contamination controversy after a funder (OpenAI) turned out to have access to most of the problem set, plus a later audit found errors in ~42% of problems
 - [[Scale AI]] — SEAL lab runs private, held-out leaderboards (Humanity's Last Exam, SWE-Bench Pro, GSM1k) specifically to keep eval data out of training corpora
 - [[LMArena]] — live, crowdsourced human-preference leaderboard that resists memorization-style contamination since votes are on fresh prompts, not a fixed test set
+- [[Princeton NLP Group (Danqi Chen)]] — co-authored Min-K% Prob and the WikiMIA benchmark, the academic reference-free detection method nearly every later contamination paper benchmarks against
 
 ## Connections
 **Parent:** [[Evals]]

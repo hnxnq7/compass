@@ -29,16 +29,19 @@ related:
 - Extending the same disaggregation idea further — separating attention from FFN layers, or separating encoder/prefill/decode for multimodal models
 
 ## Notable tools / instances
-- Splitwise, DistServe, MemServe, MegaScale-Infer (attention/FFN disaggregation), EPD-Serve (multimodal encoder/prefill/decode disaggregation)
+- **DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving** (Zhong et al., Hao AI Lab/UCSD, OSDI 2024) — the landmark paper that put PD disaggregation on the map; reports up to 4.48x goodput or 10.2x tighter SLO vs. co-located serving
+- **Splitwise: Efficient Generative LLM Inference Using Phase Splitting** (Patel et al., Microsoft/UW, ISCA 2024) — the parallel-discovery paper, framing disaggregation as a heterogeneous-hardware design space (cheaper decode-only nodes) rather than just a scheduling fix
+- MemServe, MegaScale-Infer (attention/FFN disaggregation), EPD-Serve (multimodal encoder/prefill/decode disaggregation)
 
 ## Key players
 - [[NVIDIA]] — Dynamo (GA March 2026) is becoming the reference orchestration layer, routing prefill/decode work across dedicated worker pools on top of vLLM/SGLang/TensorRT-LLM
 - [[Mooncake]] — Moonshot AI's KVCache-centric architecture pushed disaggregation from research paper into production traffic, now integrated with vLLM, SGLang, and Dynamo
 - [[vLLM]] — the open serving engine most disaggregation designs, including Dynamo, build on top of or integrate with
+- [[Hao AI Lab (UCSD, Hao Zhang)]] — originated DistServe; almost every production disaggregation system (Dynamo, Mooncake, llm-d) traces back to this paper
 
 ## Watch list
 - NVIDIA Dynamo GitHub/docs, kvcache-ai/Mooncake on GitHub
-- Hao AI Lab (UCSD) blog — publishes disaggregation retrospectives (they originated DistServe)
+- Hao AI Lab (UCSD) blog (haoailab.com/blogs) — publishes disaggregation retrospectives
 
 ## Connections
 **Parent:** [[Inference & Serving Systems]]
@@ -47,5 +50,5 @@ related:
 
 **Related:** [[KV-Cache Optimization & Compression]]
 
-**Key players:** [[NVIDIA]], [[Mooncake]], [[vLLM]]
+**Key players:** [[NVIDIA]], [[Mooncake]], [[vLLM]], [[Hao AI Lab (UCSD, Hao Zhang)]]
 

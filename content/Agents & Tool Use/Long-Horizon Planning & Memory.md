@@ -30,9 +30,15 @@ related:
 - Hierarchical goal decomposition with explicit replanning loops and structured (not just longer-context) memory becoming standard agent architecture, not an add-on
 - Reliability-horizon benchmarking (METR-style) becoming a standard capability metric alongside raw task accuracy
 
+## Notable tools / instances
+- **ReAct: Synergizing Reasoning and Acting in Language Models** (Yao, Zhao, Yu, Du, Shafran, Narasimhan, Cao — Princeton/Google, ICLR 2023) — the reasoning-then-acting loop most subsequent agent scaffolds build on
+- **Reflexion: Language Agents with Verbal Reinforcement Learning** (Shinn, Cassano, Berman, Gopinath, Narasimhan, Yao — Northeastern/Princeton/MIT, NeurIPS 2023) — verbal self-critique stored in episodic memory as a lightweight alternative to weight updates for learning from failure
+- **Voyager: An Open-Ended Embodied Agent with Large Language Models** (Wang et al. — NVIDIA/Caltech/UT Austin/Stanford, TMLR 2024) — ever-growing skill library as structured, reusable long-term memory, demonstrated in Minecraft's open-ended long-horizon setting
+
 ## Key players
 - [[METR]] — source of the task-completion time-horizon metric this field's whole "reliability at long horizons" framing leans on
 - [[Letta]] — OS-inspired self-managed agent memory (formerly MemGPT), a structural answer to the "bounded, not context-stuffed" memory problem
+- [[Princeton NLP (Narasimhan Lab)]] — academic origin of ReAct and Reflexion, the reasoning/acting and self-reflection paradigms this field's architectures are built on
 
 ## Watch list
 - METR time-horizon updates (metr.org/time-horizons)

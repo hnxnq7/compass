@@ -29,13 +29,19 @@ enables:
 - Hybrid local/global attention patterns (some layers local, some global) as the standard efficiency/quality compromise — already shipping (e.g. DeepSeek V4-Pro's hybrid attention cutting inference FLOPs to ~27% and KV cache to ~10% of its predecessor at 1M context)
 - This directly depends on [[Foundation Model Training]] architecture choices and directly enables agent workloads in [[Agents & Tool Use]] that need long, growing context
 
+## Notable tools / instances
+- **Mamba: Linear-Time Sequence Modeling with Selective State Spaces** (Gu & Dao, CMU/Princeton, 2023) — the canonical selective-SSM paper; the academic root of the hybrid attention/SSM designs now shipping in Jamba and Qwen3-Next
+- **Lost in the Middle: How Language Models Use Long Contexts** (Liu et al., Stanford, TACL 2024) — the reference result behind "claimed context ≠ usable context": performance drops sharply when relevant info sits in the middle of a long context, even for models advertised as long-context
+
 ## Key players
 - [[DeepSeek]] — V4's hybrid Compressed/Heavily-Compressed Sparse Attention is the concrete shipping example cited above
 - [[AI21 Labs]] — Jamba is the clearest production-grade hybrid Transformer-Mamba model, 256K effective context
 - [[Qwen (Alibaba)]] — Qwen3-Next's 3:1 linear/full attention ratio, matching ~32B-dense quality on <10% of the compute
+- [[Stanford Hazy Research (Chris Ré Lab)]] — FlashAttention is the hardware-aware kernel substrate nearly every hybrid-attention model trains and serves on; the S4/H3 lineage feeds directly into Mamba
 
 ## Watch list
 - DeepSeek, AI21 Labs, and Qwen technical reports/model releases (see Key players)
+- hazyresearch.stanford.edu/blog for the academic side of long-context architecture work
 - arXiv listings for hybrid/sparse attention papers (search terms: "hybrid attention," "linear attention," "long context")
 
 ## Connections
@@ -45,5 +51,5 @@ enables:
 
 **Related:** [[Model Architecture Research]]
 
-**Key players:** [[DeepSeek]], [[AI21 Labs]], [[Qwen (Alibaba)]]
+**Key players:** [[DeepSeek]], [[AI21 Labs]], [[Qwen (Alibaba)]], [[Stanford Hazy Research (Chris Ré Lab)]]
 

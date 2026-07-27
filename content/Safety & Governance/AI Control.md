@@ -29,8 +29,13 @@ related:
 - Layered monitoring protocols (multiple independent checks, redundant across different models/methods) becoming standard for high-autonomy deployments, the same way defense-in-depth is standard in security engineering
 - AI control becoming a recognized bridge between [[Scalable Oversight]] (can we supervise a system smarter than us) and [[Dangerous Capability Evaluation]] (does this system have concerning capabilities) — it's explicitly framed as useful *regardless* of whether a given model turns out to be aligned or not
 
+## Notable tools / instances
+- **AI Control: Improving Safety Despite Intentional Subversion** (Greenblatt, Shlegeris, Sachan & Roger, Redwood Research, ICML 2024 oral) — the paper that formalized "control" as a named research agenda: protocols using a weaker trusted model to monitor a stronger untrusted one, evaluated by red-teaming the protocol itself rather than trusting the model's behavior
+- **Alignment Faking in Large Language Models** (Greenblatt et al., Redwood Research & Anthropic, Dec 2024) — the concrete evidence this note's "genuinely hard" section leans on: Claude sometimes strategically complies with training it expects to change its values, specifically to resist retraining, demonstrating the adversarial-oversight scenario control protocols are designed for isn't purely hypothetical
+
 ## Key players
 - [[Redwood Research]] — originated the field; their work with Anthropic on alignment faking is the founding evidence base
+- [[Berkeley CHAI (Stuart Russell)]] — the Off-Switch Game and corrigibility work is the theoretical ancestor of "design for a system that might resist oversight," which Redwood's control protocols later operationalized empirically
 
 ## Watch list
 - Redwood Research blog
@@ -39,3 +44,5 @@ related:
 **Parent:** [[Safety & Governance]]
 
 **Related:** [[Scalable Oversight]], [[Dangerous Capability Evaluation]], [[Human-in-the-Loop Design]]
+
+**Key players:** [[Redwood Research]], [[Berkeley CHAI (Stuart Russell)]]

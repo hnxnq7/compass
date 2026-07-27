@@ -31,13 +31,15 @@ related:
 - Spawning AI's Do Not Train Registry — opt-out consent registry for creators; closest thing to working infrastructure for the "consent layer" problem, distinct from technical attribution
 - C2PA / Content Credentials — provenance-metadata standard for AI-generated media (Adobe, Google, Meta, OpenAI, Microsoft among 6,000+ members as of 2026); solves output provenance, not training-data attribution
 - ProRata — attribution-based revenue-share model for AI search, partnered with 500+ publications to split payouts by estimated content contribution
+- **Understanding Black-box Predictions via Influence Functions** (Koh & Liang — Stanford, ICML 2017, best paper) — the paper that made influence functions a practical ML tool; the foundational reference nearly every later attribution method, including TRAK, builds on or benchmarks against
 
 ## Key players
 - [[Human Native AI]] — data-licensing marketplace (now part of Cloudflare) betting that consent/payment at ingestion time is the practical fix, not technical attribution
 - [[MadryLab (MIT)]] — source of TRAK, the reference method for scalable influence-function-based data attribution
+- [[Stanford CRFM (Percy Liang)]] — Percy Liang co-authored the original influence-functions paper and now runs the Foundation Model Transparency Index, covering the provenance-disclosure side of the field
 
 ## Watch list
-- github.com/MadryLab/trak, C2PA membership/spec updates, Cloudflare's AI content-licensing announcements
+- github.com/MadryLab/trak, C2PA membership/spec updates, Cloudflare's AI content-licensing announcements, crfm.stanford.edu Transparency Index updates
 
 ## Connections
 **Parent:** [[Data]]

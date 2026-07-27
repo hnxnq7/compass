@@ -27,6 +27,10 @@ related:
 - Layered evaluation (automated metrics for coverage → LLM-as-judge for screening → human expert review for the genuinely hard/high-stakes cases) becoming the standard production pattern rather than any single method alone
 - Evals moving into CI/CD (every PR, every prompt change ships with quality metrics) rather than being a pre-launch-only gate
 
+## Notable tools / instances
+- **Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena** (Zheng et al., UC Berkeley/LMSYS, NeurIPS 2023 Datasets & Benchmarks) — the founding validation study; found GPT-4-as-judge agrees with human preference rankings over 80% of the time, comparable to human-human agreement, and remains the standard citation for the whole technique
+- **Large Language Models are not Fair Evaluators** (Wang et al., ACL 2024) — the landmark position-bias paper, showing judge rankings can be flipped just by reordering which response appears first; the reference point for "judges inherit systematic biases" claims
+
 ## Watch list
 - Arena (LMArena) leaderboard and blog
 - Patronus AI blog/announcements (Lynx, GLIDER judge model updates)
@@ -36,6 +40,7 @@ related:
 - [[LMArena]] — originated the technique itself: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (NeurIPS 2023) is the canonical validation study for LLM-as-judge
 - [[Patronus AI]] — builds proprietary judge models (Lynx for hallucination detection, GLIDER as a general judge) rather than just prompting a generic model to grade output
 - [[Confident AI]] — maker of DeepEval, an open-source framework built heavily around LLM-as-judge metrics (G-Eval etc.), reportedly running millions of evals a day inside customers' CI/CD pipelines
+- [[UC Berkeley Sky Computing Lab]] — the academic lab (Ion Stoica's group) where Chatbot Arena and MT-Bench were actually built as a research project, before LMArena spun out as a company in 2025
 
 ## Connections
 **Parent:** [[Evals]]

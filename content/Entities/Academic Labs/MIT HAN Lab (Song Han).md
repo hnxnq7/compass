@@ -5,6 +5,7 @@ type: academic-lab
 status: active
 works_in:
   - "[[Quantization]]"
+  - "[[KV-Cache Optimization & Compression]]"
 ---
 
 ## MIT HAN Lab (Song Han)
@@ -17,13 +18,15 @@ works_in:
 
 ## Where they fit
 - The reference academic source for activation-aware quantization in [[Quantization]] — AWQ and SmoothQuant are the baseline most production quantization pipelines (including NVIDIA TensorRT-LLM) build on or get benchmarked against
+- Also the academic reference point for [[KV-Cache Optimization & Compression]] — StreamingLLM's attention-sink finding underpins most cache-eviction schemes that need to stay stable over very long streaming generation
 
 ## Notable work / recent moves
 - AWQ won best paper at MLSys 2024
 - SmoothQuant and AWQ both adopted into NVIDIA TensorRT-LLM
+- StreamingLLM (ICLR 2024) — attention sinks let finite-window attention generalize to 4M+ token streams without fine-tuning
 
 ## Watch list
 - hanlab.mit.edu, mit-han-lab GitHub org
 
 ## Connections
-**Works in:** [[Quantization]]
+**Works in:** [[Quantization]], [[KV-Cache Optimization & Compression]]

@@ -174,8 +174,15 @@ import {
         });
       }
 
+      // A meta page (Overview, Field Backlog, Live Feed Vision) contributes no edges
+      // anywhere EXCEPT when you're standing on it and viewing its own local graph —
+      // otherwise that page's local preview would just be a lone dot, since its only
+      // links are the ones we deliberately strip everywhere else to avoid the mega-hub.
+      var isLocalView = depth >= 0;
+
       data.forEach(function (details, source) {
-        if (excludedPages.has(source)) return;
+        var isSelfMetaException = isLocalView && source === slug && metaPages.has(source);
+        if (excludedPages.has(source) && !isSelfMetaException) return;
         var outgoing = details.links || [];
         for (var i = 0; i < outgoing.length; i++) {
           var dest = simplifySlug(outgoing[i]);

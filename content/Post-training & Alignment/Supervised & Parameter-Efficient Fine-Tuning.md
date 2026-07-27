@@ -28,9 +28,14 @@ enables:
 - SFT increasingly used just to establish format/instruction-following, with the actual capability work pushed into RL-based post-training stages (see [[RL with Verifiable Rewards]])
 - PEFT as the default for narrow, cheap customization; full fine-tuning reserved for cases that actually need it
 
+## Notable tools / instances
+- **LoRA: Low-Rank Adaptation of Large Language Models** (Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang & Chen, Microsoft Research, ICLR 2022) — the foundational low-rank adapter paper; the reference method essentially every PEFT tool (Unsloth, Hugging Face PEFT) implements
+- **QLoRA: Efficient Finetuning of Quantized LLMs** (Dettmers, Pagnoni, Holtzman & Zettlemoyer, University of Washington, NeurIPS 2023) — combined 4-bit quantization with LoRA to fine-tune a 65B model on a single 48GB GPU; Guanaco, trained with QLoRA in 24 GPU-hours, reached 99.3% of ChatGPT's Vicuna-benchmark score, the notable result that made single-GPU PEFT credible rather than a toy demonstration
+
 ## Key players
 - [[Unsloth]] — fast, memory-efficient LoRA/QLoRA kernels; lowers the hardware bar enough for individual practitioners to run PEFT fine-tunes on a single consumer GPU
 - [[Hugging Face]] — PEFT is the standard open-source library for LoRA/QLoRA and other adapter methods
+- [[UW NLP (Zettlemoyer Lab)]] — authored QLoRA, the paper that made single-GPU PEFT practical and that Unsloth's and Hugging Face's stacks both build on
 
 ## Watch list
 - github.com/unslothai/unsloth releases
@@ -43,5 +48,5 @@ enables:
 
 **Related:** [[Model Merging & Distillation]]
 
-**Key players:** [[Unsloth]], [[Hugging Face]]
+**Key players:** [[Unsloth]], [[Hugging Face]], [[UW NLP (Zettlemoyer Lab)]]
 
