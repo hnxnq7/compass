@@ -21,6 +21,7 @@ export interface D3Config {
   opacityScale: number;
   removeTags: string[];
   showTags: boolean;
+  showEntities?: boolean;
   focusOnHover?: boolean;
   enableRadial?: boolean;
 }
@@ -42,6 +43,7 @@ const defaultOptions: GraphOptions = {
     fontSize: 0.6,
     opacityScale: 1,
     showTags: true,
+    showEntities: true,
     removeTags: [],
     focusOnHover: false,
     enableRadial: false,
@@ -57,6 +59,7 @@ const defaultOptions: GraphOptions = {
     fontSize: 0.6,
     opacityScale: 1,
     showTags: true,
+    showEntities: true,
     removeTags: [],
     focusOnHover: true,
     enableRadial: true,
@@ -73,6 +76,9 @@ export default ((userOpts?: Partial<GraphOptions>) => {
         <h3>{i18n(cfg.locale ?? "en-US").components.graph.title}</h3>
         <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
+          <button class="entities-toggle" aria-pressed="true" aria-label="Toggle entities">
+            Entities
+          </button>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"
@@ -101,6 +107,13 @@ export default ((userOpts?: Partial<GraphOptions>) => {
           </button>
         </div>
         <div class="global-graph-outer">
+          <button
+            class="entities-toggle entities-toggle-global"
+            aria-pressed="true"
+            aria-label="Toggle entities"
+          >
+            Entities
+          </button>
           <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
         </div>
       </div>

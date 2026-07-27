@@ -72,6 +72,24 @@ import {
       localStorage.setItem(localStorageKey, JSON.stringify(Array.from(visited)));
     }
 
+    // Whether to include #entity nodes (companies/labs/projects/orgs) in the
+    // graph. Persisted across renders/pages so the toggle sticks as you browse.
+    var entitiesToggleKey = "graph-show-entities";
+
+    function getShowEntities(configDefault) {
+      var stored = localStorage.getItem(entitiesToggleKey);
+      if (stored === null) return configDefault !== false;
+      return stored === "true";
+    }
+
+    function setShowEntities(value) {
+      localStorage.setItem(entitiesToggleKey, value ? "true" : "false");
+      var toggles = document.querySelectorAll(".entities-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].setAttribute("aria-pressed", value ? "true" : "false");
+      }
+    }
+
     // Resolves CSS color values containing calc()/var() that PixiJS cannot parse.
     // Uses a temp DOM element so the browser's CSS engine evaluates the expression.
     function resolveColor(value, fallback) {
@@ -109,6 +127,7 @@ import {
       var opacityScale = config.opacityScale || 1;
       var removeTags = config.removeTags || [];
       var showTags = config.showTags;
+      var showEntities = getShowEntities(config.showEntities);
       var focusOnHover = config.focusOnHover;
       var enableRadial = config.enableRadial;
 
@@ -135,19 +154,32 @@ import {
       // conceptual connection. Left in, they'd render as a mega-hub with 70+ edges
       // that dominates the whole graph. Drop them as graph nodes entirely.
       var metaPages = new Set();
+      var entityPages = new Set();
       data.forEach(function (details, source) {
         var tags = details.tags || [];
         if (tags.indexOf("field-meta") !== -1) {
           metaPages.add(source);
         }
+        if (tags.indexOf("entity") !== -1) {
+          entityPages.add(source);
+        }
       });
+      // The "Entities" toggle hides #entity nodes (companies/labs/projects/orgs)
+      // so the graph can show just the fields graph, or both layers together.
+      var excludedPages = metaPages;
+      if (!showEntities) {
+        excludedPages = new Set(metaPages);
+        entityPages.forEach(function (id) {
+          excludedPages.add(id);
+        });
+      }
 
       data.forEach(function (details, source) {
-        if (metaPages.has(source)) return;
+        if (excludedPages.has(source)) return;
         var outgoing = details.links || [];
         for (var i = 0; i < outgoing.length; i++) {
           var dest = simplifySlug(outgoing[i]);
-          if (validLinks.has(dest) && !metaPages.has(dest)) {
+          if (validLinks.has(dest) && !excludedPages.has(dest)) {
             links.push({ source: source, target: dest });
           }
         }
@@ -192,7 +224,7 @@ import {
         }
       } else {
         validLinks.forEach(function (id) {
-          if (!metaPages.has(id) || id === slug) {
+          if (!excludedPages.has(id) || id === slug) {
             neighbourhood.add(id);
           }
         });
@@ -673,6 +705,8 @@ import {
     var documentClickHandler = null;
     var documentKeydownHandler = null;
     var iconClickHandler = null;
+    var entitiesToggles = [];
+    var entitiesToggleClickHandler = null;
 
     function hideGlobalGraph() {
       cleanupGlobal();
@@ -770,6 +804,26 @@ import {
       };
       for (var i = 0; i < globalIcons.length; i++) {
         globalIcons[i].addEventListener("click", iconClickHandler);
+      }
+
+      if (entitiesToggleClickHandler) {
+        for (var i = 0; i < entitiesToggles.length; i++) {
+          entitiesToggles[i].removeEventListener("click", entitiesToggleClickHandler);
+        }
+      }
+
+      entitiesToggles = Array.from(document.querySelectorAll(".entities-toggle"));
+      setShowEntities(getShowEntities(true));
+      entitiesToggleClickHandler = function () {
+        var current = getShowEntities(true);
+        setShowEntities(!current);
+        renderLocal();
+        if (anyGlobalGraphActive()) {
+          showGlobalGraph();
+        }
+      };
+      for (var i = 0; i < entitiesToggles.length; i++) {
+        entitiesToggles[i].addEventListener("click", entitiesToggleClickHandler);
       }
 
       if (documentClickHandler) {

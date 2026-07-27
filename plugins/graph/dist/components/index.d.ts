@@ -12,6 +12,7 @@ interface D3Config {
     opacityScale: number;
     removeTags: string[];
     showTags: boolean;
+    showEntities?: boolean;
     focusOnHover?: boolean;
     enableRadial?: boolean;
 }
