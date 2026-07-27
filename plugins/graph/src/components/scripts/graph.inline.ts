@@ -280,6 +280,20 @@ import {
       var light = resolveColor(styles.getPropertyValue("--light").trim(), "#f5f5f5");
       var bodyFont = styles.getPropertyValue("--bodyFont").trim() || "inherit";
 
+      // Capped so a page with an unusually large fan-out (e.g. an index/meta page
+      // that legitimately links to everything) doesn't render as one dominating
+      // dot — most nodes are well under the cap and are unaffected.
+      var maxNodeRadius = 9;
+      function nodeRadiusFor(d) {
+        var numLinks = 0;
+        for (var i = 0; i < graphLinks.length; i++) {
+          if (graphLinks[i].source.id === d.id || graphLinks[i].target.id === d.id) {
+            numLinks++;
+          }
+        }
+        return Math.min(2 + Math.sqrt(numLinks), maxNodeRadius);
+      }
+
       var app = new PIXI.Application();
       await app.init({
         width: width,
@@ -301,21 +315,7 @@ import {
         .force("charge", d3.forceManyBody().strength(-100 * repelForce))
         .force("center", d3.forceCenter().strength(centerForce))
         .force("link", d3.forceLink(graphLinks).distance(linkDistance))
-        .force(
-          "collide",
-          d3
-            .forceCollide()
-            .radius(function (d) {
-              var numLinks = 0;
-              for (var i = 0; i < graphLinks.length; i++) {
-                if (graphLinks[i].source.id === d.id || graphLinks[i].target.id === d.id) {
-                  numLinks++;
-                }
-              }
-              return 2 + Math.sqrt(numLinks);
-            })
-            .iterations(3),
-        );
+        .force("collide", d3.forceCollide().radius(nodeRadiusFor).iterations(3));
 
       if (enableRadial) {
         var radius = (Math.min(width, height) / 2) * 0.8;
@@ -337,15 +337,7 @@ import {
       var dragging = false;
       var currentTransform = d3.zoomIdentity;
 
-      function nodeRadius(d) {
-        var numLinks = 0;
-        for (var i = 0; i < graphLinks.length; i++) {
-          if (graphLinks[i].source.id === d.id || graphLinks[i].target.id === d.id) {
-            numLinks++;
-          }
-        }
-        return 2 + Math.sqrt(numLinks);
-      }
+      var nodeRadius = nodeRadiusFor;
 
       function nodeColor(d) {
         var isCurrent = d.id === slug;
